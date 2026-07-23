@@ -1,0 +1,24 @@
+import { ReactNode } from "react";
+
+type ButtonProps = {
+  children: ReactNode;
+  variant?: "primary" | "secondary";
+};
+
+export default function Button({
+  children,
+  variant = "primary",
+}: ButtonProps) {
+  const styles =
+    variant === "primary"
+      ? "bg-black text-white hover:bg-gray-800"
+      : "border border-black text-black hover:bg-gray-100";
+
+  return (
+    <button
+      className={`rounded-xl px-6 py-3 font-medium transition ${styles}`}
+    >
+      {children}
+    </button>
+  );
+}
