@@ -1,11 +1,11 @@
-import Container from "@/components/ui/container";
+import Section from "../ui/Section";
 import Button from "@/components/ui/button";
 import Heading from "../ui/heading";
+import Text from "../ui/Text";
 
 export default function Hero() {
   return (
-    <section>
-      <Container>
+    <Section>
         <div className="flex flex-col items-center justify-between gap-16 lg:flex-row lg:justify-between">
         <div className="w-full lg:w-1/2">
 
@@ -17,11 +17,11 @@ export default function Hero() {
                 We Build Software That Helps Businesses Move Faster.
         </Heading>
 
-          <p>
-            From modern websites to scalable web applications and
-            AI-powered solutions, Orythyn partners with ambitious
-            businesses to design, build and grow digital products.
-          </p>
+          <Text>
+            From modern websites to scalable web applications and AI-powered solutions,
+            Orythyn partners with ambitious businesses to design, build and grow digital
+            products.
+          </Text>
 
           <div>
 
@@ -53,7 +53,6 @@ export default function Hero() {
             Future Hero Illustration
         </div>
         </div>
-      </Container>
-    </section>
+    </Section>
   );
 }
