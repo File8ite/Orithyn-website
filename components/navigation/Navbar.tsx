@@ -1,6 +1,6 @@
 import { navigationLinks } from "@/lib/navigation";
 import React from "react";
-import Button from "../ui/button";
+import Button from "../ui/Button";
 
 export default function Navbar() {
   return (

@@ -1,6 +1,6 @@
 import Section from "../ui/Section";
-import Button from "@/components/ui/button";
-import Heading from "../ui/heading";
+import Button from "@/components/ui/Button";
+import Heading from "../ui/Heading";
 import Text from "../ui/Text";
 
 export default function Hero() {
