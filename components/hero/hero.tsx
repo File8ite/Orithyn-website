@@ -1,6 +1,6 @@
 import Container from "@/components/ui/container";
 import Button from "@/components/ui/button";
-import { typography } from "@/lib/typography";
+import Heading from "../ui/heading";
 
 export default function Hero() {
   return (
@@ -13,9 +13,9 @@ export default function Hero() {
             Engineering Digital Products That Drive Growth
           </p>
 
-          <h1 className={typography.display}>
-            We Build Software That Helps Businesses Move Faster.
-          </h1>
+        <Heading level={1}>
+                We Build Software That Helps Businesses Move Faster.
+        </Heading>
 
           <p>
             From modern websites to scalable web applications and
