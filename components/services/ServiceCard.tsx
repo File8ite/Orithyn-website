@@ -1,5 +1,6 @@
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
+import Card from "../ui/Card";
 
 type ServiceCardProps = {
   title: string;
@@ -13,7 +14,7 @@ export default function ServiceCard({
   icon,
 }: ServiceCardProps) {
   return (
-    <article className="rounded-2xl border border-gray-200 p-8 transition hover:shadow-lg">
+    <Card>
       <div className="mb-6 text-4xl">
         {icon}
       </div>
@@ -27,6 +28,6 @@ export default function ServiceCard({
           {description}
         </Text>
       </div>
-    </article>
+    </Card>
   );
 }

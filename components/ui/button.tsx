@@ -1,13 +1,16 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 
-type ButtonProps = {
+type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   children: ReactNode;
   variant?: "primary" | "secondary";
+  className?: string;
 };
 
 export default function Button({
   children,
   variant = "primary",
+  className = "",
+  ...props
 }: ButtonProps) {
   const styles =
     variant === "primary"
@@ -16,7 +19,8 @@ export default function Button({
 
   return (
     <button
-      className={`rounded-xl px-6 py-3 font-medium transition ${styles}`}
+      className={`rounded-xl px-6 py-3 font-medium transition cursor-pointer ${styles} ${className}`}
+      {...props}
     >
       {children}
     </button>
