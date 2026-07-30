@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { navigationLinks } from "@/lib/navigation";
-import Button from "../ui/Button";
+import Button from "@/components/ui/Button";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {

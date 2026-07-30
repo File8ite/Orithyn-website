@@ -1,6 +1,6 @@
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
-import Card from "../ui/Card";
+import Card from "@/components/ui/Card";
 
 type ServiceCardProps = {
   title: string;
