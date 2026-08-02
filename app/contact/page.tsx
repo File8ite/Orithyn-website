@@ -41,48 +41,48 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-white text-neutral-900 font-sans antialiased">
+    <div className="min-h-screen flex flex-col bg-zinc-950 text-white font-sans antialiased">
       <Navbar />
       <main className="flex-1">
         {/* Contact Hero */}
-        <Section className="py-16 bg-neutral-50/70 border-b border-neutral-200/60">
-          <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-blue-600">Get in Touch</span>
-            <Heading level={1} className="text-4xl font-extrabold sm:text-5xl text-neutral-900 tracking-tight">
+        <Section className="py-16 md:py-24 border-b border-zinc-800/80 bg-zinc-900/40">
+          <div className="max-w-3xl space-y-4 px-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-yellow-400">Get in Touch</span>
+            <Heading level={1} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
               Let&apos;s Discuss Your Project.
             </Heading>
-            <Text className="text-lg text-neutral-600">
+            <Text className="text-base sm:text-lg text-zinc-300">
               Reach out directly on WhatsApp or submit your project details below to get an instant response.
             </Text>
           </div>
         </Section>
 
         {/* Contact Content */}
-        <Section className="py-20">
-          <div className="grid lg:grid-cols-12 gap-12">
+        <Section className="py-16 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
             {/* Left: Contact Info */}
             <div className="lg:col-span-5 space-y-8">
               <div>
-                <h2 className="text-2xl font-bold text-neutral-900 mb-4">Contact Channels</h2>
-                <p className="text-neutral-600 text-sm leading-relaxed">
+                <h2 className="text-2xl font-bold text-white mb-4">Contact Channels</h2>
+                <p className="text-zinc-300 text-sm leading-relaxed">
                   We reply to all WhatsApp messages and email inquiries promptly.
                 </p>
               </div>
 
               <div className="space-y-6">
                 {/* WhatsApp Quick Link */}
-                <div className="flex items-start gap-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-200/80">
-                  <div className="p-3 rounded-xl bg-emerald-600 text-white shrink-0">
+                <div className="flex items-start gap-4 p-5 rounded-2xl bg-zinc-900/80 border border-yellow-500/30">
+                  <div className="p-3 rounded-xl bg-yellow-500/10 text-yellow-400 shrink-0">
                     <MessageSquare className="h-5 w-5" />
                   </div>
                   <div className="space-y-1">
-                    <h3 className="text-sm font-bold text-emerald-950">Chat on WhatsApp</h3>
-                    <p className="text-xs text-emerald-800 font-mono">+234 814 852 6658</p>
+                    <h3 className="text-sm font-bold text-white">Chat on WhatsApp</h3>
+                    <p className="text-xs text-yellow-400 font-mono">+234 814 852 6658</p>
                     <a
                       href={`https://wa.me/${whatsappNumber}?text=Hello%20Orythyn,%20I'd%20like%20to%20discuss%20a%20project`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-bold text-emerald-700 hover:underline pt-1"
+                      className="inline-flex items-center gap-1 text-xs font-bold text-yellow-400 hover:underline pt-1"
                     >
                       Open WhatsApp Chat →
                     </a>
@@ -90,67 +90,67 @@ export default function ContactPage() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-blue-50 border border-blue-100 text-blue-600 shrink-0">
+                  <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-800 text-yellow-400 shrink-0">
                     <Mail className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-neutral-900">Email Us</h3>
-                    <a href="mailto:contact@orithyn.com" className="text-sm text-blue-600 hover:underline">
+                    <h3 className="text-sm font-semibold text-white">Email Us</h3>
+                    <a href="mailto:contact@orithyn.com" className="text-sm text-yellow-400 hover:underline">
                       contact@orithyn.com
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-neutral-100 border border-neutral-200 text-neutral-700 shrink-0">
+                  <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-800 text-yellow-400 shrink-0">
                     <Phone className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-neutral-900">Phone / Call</h3>
-                    <a href="tel:+2348148526658" className="text-sm text-neutral-700 hover:underline">
+                    <h3 className="text-sm font-semibold text-white">Phone / Direct Line</h3>
+                    <a href="tel:+2348148526658" className="text-sm text-zinc-300 hover:underline">
                       +234 814 852 6658
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-xl bg-purple-50 border border-purple-100 text-purple-600 shrink-0">
+                  <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-800 text-yellow-400 shrink-0">
                     <MapPin className="h-5 w-5" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-neutral-900">Company</h3>
-                    <p className="text-sm text-neutral-600">Orythyn Inc.</p>
+                    <h3 className="text-sm font-semibold text-white">Company</h3>
+                    <p className="text-sm text-zinc-300">Orythyn Inc.</p>
                   </div>
                 </div>
               </div>
 
               {/* GitHub repo callout */}
-              <div className="p-6 rounded-2xl bg-neutral-900 text-white space-y-3">
-                <h3 className="text-sm font-bold">Open Source &amp; Repository</h3>
-                <p className="text-xs text-neutral-400">
-                  Explore our public code repositories and website source on GitHub.
+              <div className="p-6 rounded-2xl bg-zinc-900/90 border border-zinc-800 text-white space-y-3">
+                <h3 className="text-sm font-bold">Source Code &amp; Repository</h3>
+                <p className="text-xs text-zinc-400">
+                  Explore our public code repositories and engineering standards on GitHub.
                 </p>
                 <a
-                  href="https://github.com/Orithyn/website"
+                  href="https://github.com/File8ite/Orithyn-website"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-xs font-semibold text-blue-400 hover:underline"
+                  className="inline-flex items-center gap-2 text-xs font-semibold text-yellow-400 hover:underline"
                 >
-                  github.com/Orithyn/website →
+                  github.com/File8ite/Orithyn-website →
                 </a>
               </div>
             </div>
 
             {/* Right: Contact Form */}
-            <div className="lg:col-span-7 bg-white p-8 rounded-3xl border border-neutral-200/80 shadow-md">
+            <div className="lg:col-span-7 bg-zinc-900/80 p-6 sm:p-10 rounded-3xl border border-zinc-800 shadow-2xl backdrop-blur-xl">
               {submitted ? (
                 <div className="text-center py-12 space-y-4">
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-yellow-500/10 text-yellow-400">
                     <CheckCircle2 className="h-8 w-8" />
                   </div>
-                  <h3 className="text-2xl font-bold text-neutral-900">Inquiry Prepared for WhatsApp!</h3>
-                  <p className="text-sm text-neutral-600 max-w-md mx-auto">
-                    WhatsApp has opened in a new tab with your pre-filled inquiry. You can also send an email to <strong className="text-neutral-900">contact@orithyn.com</strong>.
+                  <h3 className="text-2xl font-bold text-white">Inquiry Prepared for WhatsApp!</h3>
+                  <p className="text-sm text-zinc-300 max-w-md mx-auto">
+                    WhatsApp has opened in a new tab with your pre-filled inquiry. You can also send an email to <strong className="text-white">contact@orithyn.com</strong>.
                   </p>
                   <Button
                     variant="secondary"
@@ -166,15 +166,15 @@ export default function ContactPage() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-bold text-neutral-900">Send an Enquiry</h2>
-                    <span className="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+                    <h2 className="text-xl font-bold text-white">Send an Enquiry</h2>
+                    <span className="text-xs text-yellow-400 font-semibold flex items-center gap-1">
                       <MessageSquare className="h-3.5 w-3.5" /> Direct to WhatsApp
                     </span>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">
+                      <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
                         Full Name *
                       </label>
                       <input
@@ -183,12 +183,12 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="John Doe"
-                        className="w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm focus:border-neutral-900 focus:outline-none"
+                        className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:border-yellow-400 focus:outline-none"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">
+                      <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
                         Email Address *
                       </label>
                       <input
@@ -197,14 +197,14 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="john@company.com"
-                        className="w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm focus:border-neutral-900 focus:outline-none"
+                        className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:border-yellow-400 focus:outline-none"
                       />
                     </div>
                   </div>
 
-                  <div className="grid sm:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">
+                      <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
                         Company / Organization
                       </label>
                       <input
@@ -212,18 +212,18 @@ export default function ContactPage() {
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                         placeholder="Acme Corp"
-                        className="w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm focus:border-neutral-900 focus:outline-none"
+                        className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:border-yellow-400 focus:outline-none"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">
+                      <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
                         Primary Need
                       </label>
                       <select
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm focus:border-neutral-900 focus:outline-none bg-white"
+                        className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white focus:border-yellow-400 focus:outline-none"
                       >
                         <option value="Custom Software Development">Custom Software Development</option>
                         <option value="Business Automation">Business Automation</option>
@@ -235,7 +235,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700 mb-2">
+                    <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
                       Project Details *
                     </label>
                     <textarea
@@ -244,11 +244,11 @@ export default function ContactPage() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Briefly describe your goals, timeline, or requirements..."
-                      className="w-full rounded-xl border border-neutral-300 px-4 py-3 text-sm focus:border-neutral-900 focus:outline-none"
+                      className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:border-yellow-400 focus:outline-none"
                     />
                   </div>
 
-                  <Button type="submit" variant="primary" className="h-12 w-full justify-center inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white">
+                  <Button type="submit" variant="primary" className="h-12 w-full justify-center inline-flex items-center gap-2">
                     Send via WhatsApp <Send className="h-4 w-4" />
                   </Button>
                 </form>

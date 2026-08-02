@@ -3,30 +3,30 @@ export const services = [
     title: "Custom Software Development",
     description:
       "We design and build software tailored to your unique business processes, helping you operate more efficiently and scale with confidence.",
-    icon: "💻",
+    iconName: "Code2",
   },
   {
-    title: "Web Applications",
+    title: "Web Applications & Portals",
     description:
-      "Modern, responsive, and secure web applications that improve customer experiences and streamline operations.",
-    icon: "🌐",
+      "Modern, responsive, and secure web applications that improve customer experiences and streamline internal operations.",
+    iconName: "Globe",
   },
   {
-    title: "Business Automation",
+    title: "Business Process Automation",
     description:
-      "Automate repetitive tasks and optimize workflows so your team can focus on high-value work.",
-    icon: "⚙️",
+      "Automate repetitive tasks, inventory management, and internal workflows so your team can focus on high-value work.",
+    iconName: "Workflow",
   },
   {
-    title: "AI Solutions",
+    title: "Intelligent Systems & Analytics",
     description:
-      "Leverage practical AI solutions to enhance productivity, uncover insights, and create better customer experiences.",
-    icon: "🤖",
+      "Leverage practical data pipelines and automated analytics dashboards to uncover operational insights and drive efficiency.",
+    iconName: "Cpu",
   },
   {
-    title: "Maintenance & Support",
+    title: "Maintenance & SLA Support",
     description:
-      "Keep your software secure, reliable, and up to date with ongoing maintenance and technical support.",
-    icon: "🛠️",
+      "Keep your software secure, reliable, and up to date with ongoing technical maintenance, monitoring, and dedicated SLAs.",
+    iconName: "Wrench",
   },
 ];
