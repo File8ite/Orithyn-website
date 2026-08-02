@@ -1,11 +1,13 @@
 export const theme = {
   colors: {
-    primary: "#0F172A",
-    secondary: "#2563EB",
-    background: "#FFFFFF",
-    surface: "#F8FAFC",
-    text: "#1E293B",
-    muted: "#64748B",
+    primary: "#09090B",
+    secondary: "#EAB308",
+    gold: "#F59E0B",
+    background: "#09090B",
+    surface: "#121215",
+    text: "#FFFFFF",
+    muted: "#A1A1AA",
+    border: "rgba(234, 179, 8, 0.2)",
   },
 
   radius: {

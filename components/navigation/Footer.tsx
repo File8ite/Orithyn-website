@@ -6,18 +6,18 @@ export default function Footer() {
   const whatsappNumber = "2348148526658";
 
   return (
-    <footer className="border-t border-neutral-200 bg-neutral-950 text-neutral-400 py-16">
-      <div className="mx-auto max-w-7xl px-6 grid gap-12 lg:grid-cols-12">
+    <footer className="border-t border-zinc-800/80 bg-zinc-950 text-zinc-400 py-12 md:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-12">
         {/* Brand & Overview */}
-        <div className="lg:col-span-5 space-y-4">
-          <Link href="/" className="inline-flex items-center gap-2 text-2xl font-bold tracking-tight text-white">
-            <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-white text-black font-mono text-base font-extrabold">
+        <div className="sm:col-span-2 lg:col-span-5 space-y-4">
+          <Link href="/" className="inline-flex items-center gap-3 text-2xl font-bold tracking-tight text-white hover:text-yellow-400 transition">
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-400 text-black font-mono text-base font-extrabold shadow-md shadow-amber-500/20">
               O
             </span>
-            <span>ORYTHYN</span>
+            <span className="font-extrabold tracking-wider">ORYTHYN</span>
           </Link>
-          <p className="text-sm leading-relaxed text-neutral-400 max-w-md">
-            Orythyn Inc. is a software engineering company dedicated to designing, building, and scaling high-impact digital products for ambitious organizations.
+          <p className="text-sm leading-relaxed text-zinc-400 max-w-md">
+            Orythyn Inc. is a custom software engineering studio dedicated to designing, building, and scaling high-impact digital products for ambitious organizations.
           </p>
           <div className="flex items-center gap-4 pt-2">
             {/* WhatsApp */}
@@ -25,7 +25,7 @@ export default function Footer() {
               href={`https://wa.me/${whatsappNumber}?text=Hello%20Orythyn,%20I'd%20like%20to%20discuss%20a%20project`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-950 text-emerald-400 border border-emerald-800 transition hover:bg-emerald-900 hover:text-white"
+              className="flex h-10 w-10 items-center justify-center rounded-xl bg-yellow-500/10 text-yellow-400 border border-yellow-500/30 transition hover:bg-yellow-500 hover:text-black shadow-sm"
               aria-label="WhatsApp Us"
               title="WhatsApp +234 814 852 6658"
             >
@@ -33,10 +33,10 @@ export default function Footer() {
             </a>
             {/* GitHub SVG */}
             <a
-              href="https://github.com/Orithyn/website"
+              href="https://github.com/File8ite/Orithyn-website"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-neutral-300 transition hover:bg-neutral-800 hover:text-white"
+              className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-900 text-zinc-300 border border-zinc-800 transition hover:border-yellow-500/40 hover:text-white"
               aria-label="GitHub Repository"
             >
               <svg className="h-5 w-5 fill-current" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ export default function Footer() {
             {/* Email */}
             <a
               href="mailto:contact@orithyn.com"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-900 text-neutral-300 transition hover:bg-neutral-800 hover:text-white"
+              className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-900 text-zinc-300 border border-zinc-800 transition hover:border-yellow-500/40 hover:text-white"
               aria-label="Email Us"
             >
               <Mail className="h-5 w-5" />
@@ -60,7 +60,7 @@ export default function Footer() {
           <ul className="space-y-2.5 text-sm">
             {navigationLinks.map((link) => (
               <li key={link.name}>
-                <Link href={link.href} className="transition hover:text-white">
+                <Link href={link.href} className="transition text-zinc-400 hover:text-yellow-400">
                   {link.name}
                 </Link>
               </li>
@@ -71,10 +71,10 @@ export default function Footer() {
         {/* Contact & Legal */}
         <div className="lg:col-span-4 space-y-4">
           <h3 className="text-sm font-semibold uppercase tracking-wider text-white">Direct Contacts</h3>
-          <p className="text-sm text-neutral-400">
-            WhatsApp: <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="text-emerald-400 hover:underline">+234 814 852 6658</a>
+          <p className="text-sm text-zinc-400">
+            WhatsApp: <a href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer" className="text-yellow-400 font-medium hover:underline">+234 814 852 6658</a>
           </p>
-          <p className="text-sm text-neutral-400">
+          <p className="text-sm text-zinc-400">
             Email: <a href="mailto:contact@orithyn.com" className="text-white hover:underline">contact@orithyn.com</a>
           </p>
           <div className="pt-2">
@@ -82,7 +82,7 @@ export default function Footer() {
               href={`https://wa.me/${whatsappNumber}?text=Hello%20Orythyn,%20I'd%20like%20to%20discuss%20a%20project`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-emerald-400 hover:text-emerald-300 transition"
+              className="inline-flex items-center gap-2 text-sm font-medium text-yellow-400 hover:text-yellow-300 transition"
             >
               Chat on WhatsApp <ArrowUpRight className="h-4 w-4" />
             </a>
@@ -91,11 +91,11 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="mx-auto max-w-7xl px-6 mt-12 pt-8 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between text-xs text-neutral-500 gap-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 mt-12 pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
         <p>© {new Date().getFullYear()} Orythyn Inc. All rights reserved.</p>
         <div className="flex gap-6">
-          <span className="hover:text-neutral-400 cursor-pointer">Privacy Policy</span>
-          <span className="hover:text-neutral-400 cursor-pointer">Terms of Service</span>
+          <span className="hover:text-zinc-300 cursor-pointer">Privacy Policy</span>
+          <span className="hover:text-zinc-300 cursor-pointer">Terms of Service</span>
         </div>
       </div>
     </footer>
