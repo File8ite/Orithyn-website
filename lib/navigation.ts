@@ -4,12 +4,20 @@ export const navigationLinks = [
     href: "/services",
   },
   {
+    name: "Portfolio",
+    href: "/portfolio",
+  },
+  {
+    name: "Estimator",
+    href: "/estimator",
+  },
+  {
     name: "Industries",
-    href: "/#industries",
+    href: "/industries",
   },
   {
     name: "Process",
-    href: "/#process",
+    href: "/process",
   },
   {
     name: "About",

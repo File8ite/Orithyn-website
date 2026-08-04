@@ -1,15 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/navigation/Navbar";
 import Footer from "@/components/navigation/Footer";
 import Section from "@/components/ui/Section";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
 import Button from "@/components/ui/Button";
-import { Mail, MapPin, Send, CheckCircle2, MessageSquare, Phone } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle2, MessageSquare, Phone, Sparkles } from "lucide-react";
 
-export default function ContactPage() {
+function ContactFormContent() {
+  const searchParams = useSearchParams();
+  const scopeParam = searchParams.get("scope");
+
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -18,6 +22,16 @@ export default function ContactPage() {
     service: "Custom Software Development",
     message: "",
   });
+
+  // Pre-fill message if scope parameter is passed from estimator
+  useEffect(() => {
+    if (scopeParam) {
+      setFormData((prev) => ({
+        ...prev,
+        message: scopeParam,
+      }));
+    }
+  }, [scopeParam]);
 
   const whatsappNumber = "2348148526658";
 
@@ -31,14 +45,135 @@ export default function ContactPage() {
       `*Name:* ${formData.name}\n` +
       `*Email:* ${formData.email}\n` +
       `*Company:* ${formData.company || "N/A"}\n` +
-      `*Service Required:* ${formData.service}\n` +
-      `*Details:* ${formData.message}`
+      `*Service Required:* ${formData.service}\n\n` +
+      `*Project Specifications / Details:*\n${formData.message}`
     );
     
     // Open WhatsApp with prefilled message
     window.open(`https://wa.me/${whatsappNumber}?text=${text}`, "_blank");
     setSubmitted(true);
   };
+
+  return (
+    <div className="lg:col-span-7 bg-zinc-900/80 p-6 sm:p-10 rounded-3xl border border-zinc-800 shadow-2xl backdrop-blur-xl">
+      {submitted ? (
+        <div className="text-center py-12 space-y-4">
+          <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-yellow-500/10 text-yellow-400">
+            <CheckCircle2 className="h-8 w-8" />
+          </div>
+          <h3 className="text-2xl font-bold text-white">Inquiry Prepared for WhatsApp!</h3>
+          <p className="text-sm text-zinc-300 max-w-md mx-auto">
+            WhatsApp has opened in a new tab with your pre-filled inquiry. You can also send an email to <strong className="text-white">contact@orithyn.com</strong>.
+          </p>
+          <Button
+            variant="secondary"
+            onClick={() => {
+              setSubmitted(false);
+              setFormData({ name: "", email: "", company: "", service: "Custom Software Development", message: "" });
+            }}
+            className="mt-4"
+          >
+            Submit Another Inquiry
+          </Button>
+        </div>
+      ) : (
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="flex items-center justify-between">
+            <h2 className="text-xl font-bold text-white">Send an Enquiry</h2>
+            {scopeParam && (
+              <span className="text-xs text-amber-400 font-semibold bg-amber-500/10 border border-amber-500/30 px-2.5 py-1 rounded-full flex items-center gap-1">
+                <Sparkles className="h-3 w-3" /> Pre-filled Scope Estimate
+              </span>
+            )}
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+                Full Name *
+              </label>
+              <input
+                type="text"
+                required
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                placeholder="John Doe"
+                className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:border-yellow-400 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+                Email Address *
+              </label>
+              <input
+                type="email"
+                required
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                placeholder="john@company.com"
+                className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:border-yellow-400 focus:outline-none"
+              />
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+                Company / Organization
+              </label>
+              <input
+                type="text"
+                value={formData.company}
+                onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                placeholder="Acme Corp"
+                className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:border-yellow-400 focus:outline-none"
+              />
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+                Primary Need
+              </label>
+              <select
+                value={formData.service}
+                onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white focus:border-yellow-400 focus:outline-none"
+              >
+                <option value="Custom Software Development">Custom Software Development</option>
+                <option value="Business Automation">Business Automation</option>
+                <option value="Web Applications">Web Application</option>
+                <option value="AI-Enhanced Solutions">AI-Enhanced Solutions</option>
+                <option value="Software Maintenance & Support">Software Maintenance & Support</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
+              Project Details / Estimated Scope *
+            </label>
+            <textarea
+              required
+              rows={6}
+              value={formData.message}
+              onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              placeholder="Briefly describe your goals, timeline, or requirements..."
+              className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:border-yellow-400 focus:outline-none font-mono text-xs leading-relaxed"
+            />
+          </div>
+
+          <Button type="submit" variant="primary" className="h-12 w-full justify-center inline-flex items-center gap-2">
+            Send via WhatsApp <Send className="h-4 w-4" />
+          </Button>
+        </form>
+      )}
+    </div>
+  );
+}
+
+export default function ContactPage() {
+  const whatsappNumber = "2348148526658";
 
   return (
     <div className="min-h-screen flex flex-col bg-zinc-950 text-white font-sans antialiased">
@@ -141,119 +276,10 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right: Contact Form */}
-            <div className="lg:col-span-7 bg-zinc-900/80 p-6 sm:p-10 rounded-3xl border border-zinc-800 shadow-2xl backdrop-blur-xl">
-              {submitted ? (
-                <div className="text-center py-12 space-y-4">
-                  <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-yellow-500/10 text-yellow-400">
-                    <CheckCircle2 className="h-8 w-8" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">Inquiry Prepared for WhatsApp!</h3>
-                  <p className="text-sm text-zinc-300 max-w-md mx-auto">
-                    WhatsApp has opened in a new tab with your pre-filled inquiry. You can also send an email to <strong className="text-white">contact@orithyn.com</strong>.
-                  </p>
-                  <Button
-                    variant="secondary"
-                    onClick={() => {
-                      setSubmitted(false);
-                      setFormData({ name: "", email: "", company: "", service: "Custom Software Development", message: "" });
-                    }}
-                    className="mt-4"
-                  >
-                    Submit Another Inquiry
-                  </Button>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-bold text-white">Send an Enquiry</h2>
-                    <span className="text-xs text-yellow-400 font-semibold flex items-center gap-1">
-                      <MessageSquare className="h-3.5 w-3.5" /> Direct to WhatsApp
-                    </span>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
-                        Full Name *
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="John Doe"
-                        className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:border-yellow-400 focus:outline-none"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="john@company.com"
-                        className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:border-yellow-400 focus:outline-none"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
-                        Company / Organization
-                      </label>
-                      <input
-                        type="text"
-                        value={formData.company}
-                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        placeholder="Acme Corp"
-                        className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:border-yellow-400 focus:outline-none"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
-                        Primary Need
-                      </label>
-                      <select
-                        value={formData.service}
-                        onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white focus:border-yellow-400 focus:outline-none"
-                      >
-                        <option value="Custom Software Development">Custom Software Development</option>
-                        <option value="Business Automation">Business Automation</option>
-                        <option value="Web Applications">Web Application</option>
-                        <option value="AI-Enhanced Solutions">AI-Enhanced Solutions</option>
-                        <option value="Software Maintenance & Support">Software Maintenance & Support</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-zinc-300 mb-2">
-                      Project Details *
-                    </label>
-                    <textarea
-                      required
-                      rows={5}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Briefly describe your goals, timeline, or requirements..."
-                      className="w-full rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 text-sm text-white placeholder-zinc-500 focus:border-yellow-400 focus:outline-none"
-                    />
-                  </div>
-
-                  <Button type="submit" variant="primary" className="h-12 w-full justify-center inline-flex items-center gap-2">
-                    Send via WhatsApp <Send className="h-4 w-4" />
-                  </Button>
-                </form>
-              )}
-            </div>
+            {/* Right: Contact Form Wrapped in Suspense */}
+            <Suspense fallback={<div className="lg:col-span-7 p-10 bg-zinc-900/80 rounded-3xl border border-zinc-800 text-center text-zinc-400">Loading form...</div>}>
+              <ContactFormContent />
+            </Suspense>
           </div>
         </Section>
       </main>
