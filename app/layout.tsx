@@ -17,24 +17,27 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://orithyn.com"),
   title: {
-    default: "Orythyn Inc. — Custom Web Apps, AI Products & Automation",
-    template: "%s | Orythyn Inc.",
+    default: "Orithyn Inc. — Custom Software, Web & Mobile Applications",
+    template: "%s | Orithyn Inc.",
   },
   description:
-    "Orythyn Inc. is a full-stack software engineering and AI studio partnering with ambitious companies to design, build, and scale custom web applications, AI assistants, and automated workflows.",
+    "Orithyn Inc. is a professional software development company building custom digital solutions for businesses — including web and mobile applications, backend systems, business management platforms, and ongoing technical support.",
   keywords: [
-    "Custom Software Development Studio",
-    "Web Application Development Company",
-    "AI Knowledge Assistant RAG",
-    "Business Process Automation",
-    "Next.js React Software Engineers",
-    "Software Maintenance SLA",
-    "Orythyn Inc.",
-    "Orythyn Website",
+    "Custom Software Development Company",
+    "Web Application Development",
+    "Mobile Application Development React Native",
+    "Backend & REST API Development",
+    "Business Management Systems",
+    "School Management Software",
+    "Hospital Management Software",
+    "Hotel Booking Software",
+    "Workflow Automation",
+    "Software Maintenance and Support",
+    "Orithyn Inc.",
   ],
-  authors: [{ name: "Orythyn Inc.", url: "https://orithyn.com" }],
-  creator: "Orythyn Inc.",
-  publisher: "Orythyn Inc.",
+  authors: [{ name: "Orithyn Inc.", url: "https://orithyn.com" }],
+  creator: "Orithyn Inc.",
+  publisher: "Orithyn Inc.",
   formatDetection: {
     email: false,
     address: false,
@@ -44,11 +47,11 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Orythyn Inc. — Custom Web Apps, AI Products & Automation",
+    title: "Orithyn Inc. — Custom Software & Digital Solutions for Business",
     description:
-      "We partner with ambitious companies to engineer custom web platforms, enterprise AI assistants, and automated workflows built for high performance.",
+      "Orithyn builds custom software, web applications, mobile apps, and business management systems tailored to organizational needs.",
     url: "https://orithyn.com",
-    siteName: "Orythyn Inc.",
+    siteName: "Orithyn Inc.",
     locale: "en_US",
     type: "website",
     images: [
@@ -56,15 +59,15 @@ export const metadata: Metadata = {
         url: "/favicon.ico",
         width: 1200,
         height: 630,
-        alt: "Orythyn Inc. Custom Software Studio",
+        alt: "Orithyn Inc. Software Development Company",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Orythyn Inc. — Custom Web Apps, AI Products & Automation",
-    description: "Custom software engineering, AI knowledge assistants, and business workflow automation.",
-    creator: "@orythyn",
+    title: "Orithyn Inc. — Custom Software & Digital Solutions for Business",
+    description: "Custom software development, web & mobile applications, backend systems, and technical support.",
+    creator: "@orithyn",
   },
   robots: {
     index: true,
@@ -96,7 +99,7 @@ export default function RootLayout({
         <JsonLd data={orgSchema} />
         <JsonLd data={serviceSchema} />
       </head>
-      <body className="min-h-full flex flex-col bg-white text-neutral-900 selection:bg-neutral-900 selection:text-white">
+      <body className="min-h-full flex flex-col bg-zinc-950 text-white selection:bg-amber-500 selection:text-black">
         {children}
       </body>
     </html>

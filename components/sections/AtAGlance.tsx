@@ -9,47 +9,47 @@ export default function AtAGlance() {
     {
       id: "web-apps",
       icon: <LayoutDashboard className="h-6 w-6 text-amber-400" />,
-      tagline: "Custom Web & SaaS Development",
-      title: "Full-Stack Web Applications & Client Portals",
+      tagline: "Web & Business Software",
+      title: "Custom Web Applications & Portals",
       description:
-        "We build high-performance web applications, customer portals, and internal management tools from scratch using React, Next.js, and TypeScript.",
+        "We build responsive web applications, customer portals, and internal management tools from scratch using modern, type-safe technologies.",
       bullets: [
-        "Tailored user interfaces & admin dashboards",
-        "Secure auth, payments, & API integrations",
-        "Sub-second page speeds & SEO optimization",
+        "Tailored user interfaces & administrative control panels",
+        "Secure user authentication & role-based permissions",
+        "Clean architecture designed for fast loading & maintainability",
       ],
-      linkText: "Explore Web Engineering",
-      href: "/services#web-development",
+      linkText: "Explore Web Applications",
+      href: "/services#web-applications",
     },
     {
       id: "ai-automation",
       icon: <Bot className="h-6 w-6 text-amber-400" />,
-      tagline: "AI Systems & Automation",
-      title: "AI Knowledge Assistants & Workflow Automation",
+      tagline: "AI & Process Automation",
+      title: "Intelligent Workflows & Document Assistance",
       description:
-        "We integrate AI into your operations—building enterprise chatbots, vector document search, and automated pipelines that replace repetitive tasks.",
+        "We help organizations apply practical automation and AI—building internal search tools, document assistants, and data pipelines that reduce repetitive manual tasks.",
       bullets: [
-        "Private LLM & RAG document search engines",
-        "Automated CRM & customer query routing",
-        "Data extraction & automated reporting pipelines",
+        "Internal document search & knowledge retrieval tools",
+        "Automated inquiry sorting & team notifications",
+        "Scheduled data synchronization and reporting pipelines",
       ],
-      linkText: "Explore AI & Automation",
-      href: "/services#ai-automation",
+      linkText: "Explore Automation Solutions",
+      href: "/services#ai-solutions",
     },
     {
-      id: "sla-support",
+      id: "support-maintenance",
       icon: <ShieldCheck className="h-6 w-6 text-amber-400" />,
-      tagline: "SLA Maintenance & Support",
-      title: "Dedicated Technical Maintenance & Scaling",
+      tagline: "Maintenance & Support",
+      title: "Dedicated Technical Support & Upkeep",
       description:
-        "We don't abandon your code after launch. We provide ongoing 24/7 SLA uptime monitoring, cloud maintenance, and feature enhancements.",
+        "We provide structured post-launch support agreements so your software remains secure, dependable, and updated as your operations expand.",
       bullets: [
-        "99.99% uptime SLA commitments",
+        "Proactive system health & error tracking",
         "Continuous security updates & dependency audits",
-        "Dedicated senior engineering response line",
+        "Direct developer support for bug fixes and feature enhancements",
       ],
-      linkText: "Explore SLA Maintenance",
-      href: "/services#maintenance",
+      linkText: "Explore Maintenance Support",
+      href: "/services#software-maintenance",
     },
   ];
 
@@ -60,10 +60,10 @@ export default function AtAGlance() {
           In One Glance
         </span>
         <Heading level={2} className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
-          What Orythyn Does For Your Business
+          What Orithyn Does For Your Business
         </Heading>
         <Text className="text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto">
-          We eliminate the guess-work of software development. Here is exactly what our engineering studio delivers.
+          We build dependable digital software that solves operational bottlenecks and scales with your organization.
         </Text>
       </div>
 

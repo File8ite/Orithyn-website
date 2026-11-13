@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dbBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+    <linearGradient id="dbCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0b0f19"/>
+    </linearGradient>
+    <marker id="arrowCyan" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#06b6d4"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#a855f7"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="660" fill="url(#dbBg)"/>
+  <rect x="1" y="1" width="998" height="658" fill="none" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Top Header -->
+  <g transform="translate(40, 32)">
+    <rect x="0" y="0" width="168" height="26" rx="13" fill="#0e7490" fill-opacity="0.3" stroke="#06b6d4" stroke-width="1"/>
+    <text x="84" y="17" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1.5">VERIFIED ARCHITECTURE</text>
+    <text x="0" y="56" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="800">DocuBrain AI — RAG &amp; Vector Search Architecture</text>
+    <text x="0" y="78" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">FastAPI backend, PostgreSQL pgvector cosine similarity search, SSE token streaming, and Shadow DOM embed script</text>
+  </g>
+
+  <!-- COLUMN 1: CLIENT & EMBED (LEFT) -->
+  <g transform="translate(40, 130)">
+    <rect width="280" height="500" rx="14" fill="url(#dbCard)" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="16" y="14" width="248" height="30" rx="6" fill="#1e293b"/>
+    <text x="28" y="34" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🌐 CLIENT EMBED &amp; ADMIN UI</text>
+
+    <!-- Sub-block: Shadow DOM Widget -->
+    <g transform="translate(16, 54)">
+      <rect width="248" height="170" rx="8" fill="#0b0f19" stroke="#06b6d4" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Embeddable Chat Widget</text>
+      <text x="12" y="38" fill="#06b6d4" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">frontend/public/widget.js</text>
+      <text x="12" y="60" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Shadow DOM Container (attachShadow)</text>
+      <text x="12" y="78" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Scoped CSS Style Encapsulation</text>
+      <text x="12" y="96" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Floating FAB &amp; Interactive Chat Window</text>
+      <text x="12" y="114" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• SSE Stream Consumer (real-time tokens)</text>
+      <text x="12" y="132" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Client lead capture &amp; feedback buttons</text>
+      <text x="12" y="154" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">✓ Native Shadow DOM Encapsulation</text>
+    </g>
+
+    <!-- Sub-block: Admin Dashboard UI -->
+    <g transform="translate(16, 234)">
+      <rect width="248" height="250" rx="8" fill="#0b0f19" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Next.js 15 Admin Console</text>
+      <text x="12" y="38" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">frontend/src/app/dashboard</text>
+      <text x="12" y="62" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Document Management (PDF / FAQ)</text>
+      <text x="12" y="80" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Ingestion status &amp; chunk inspection</text>
+      <text x="12" y="98" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Live Assistant Test Sandbox</text>
+      <text x="12" y="116" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Lead Capture &amp; Escalation Inbox</text>
+      <text x="12" y="134" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Unanswered query triage</text>
+      <rect x="12" y="154" width="224" height="50" rx="6" fill="#1e293b"/>
+      <text x="22" y="174" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">Embed Snippet Generator</text>
+      <text x="22" y="190" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="9.5">Generates data-widget-id script tag</text>
+      <text x="12" y="234" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">✓ Verified in Dashboard Code</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: FASTAPI BACKEND (CENTER) -->
+  <g transform="translate(360, 130)">
+    <rect width="290" height="500" rx="14" fill="url(#dbCard)" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="16" y="14" width="258" height="30" rx="6" fill="#1e293b"/>
+    <text x="28" y="34" fill="#a855f7" font-family="system-ui, sans-serif" font-size="12" font-weight="700">⚡ FASTAPI RAG BACKEND</text>
+
+    <!-- Sub-block: Ingestion -->
+    <g transform="translate(16, 54)">
+      <rect width="258" height="170" rx="8" fill="#0b0f19" stroke="#a855f7" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Document Ingestion Pipeline</text>
+      <text x="12" y="38" fill="#a855f7" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">app/services/pdf_service.py</text>
+      <text x="12" y="60" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• PyPDF document text extraction</text>
+      <text x="12" y="78" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10.5">• CHUNK_SIZE = 500 words</text>
+      <text x="12" y="96" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10.5">• CHUNK_OVERLAP = 50 words (10%)</text>
+      <text x="12" y="114" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Embedding: text-embedding-3-small</text>
+      <text x="12" y="132" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• 1536-Dimensional vector output</text>
+      <text x="12" y="154" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">✓ Verified in backend/app/config.py</text>
+    </g>
+
+    <!-- Sub-block: RAG & Streaming -->
+    <g transform="translate(16, 234)">
+      <rect width="258" height="250" rx="8" fill="#0b0f19" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">RAG Retrieval &amp; Generation</text>
+      <text x="12" y="38" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">app/services/rag_service.py</text>
+      <text x="12" y="62" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Query vectorization via embedding model</text>
+      <text x="12" y="80" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Top-k chunk retrieval with tenant filter</text>
+      <text x="12" y="98" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Similarity score: max(0.0, 1.0 - distance)</text>
+      <text x="12" y="116" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• LLM inference: Llama 3.1 8B via Groq</text>
+      <text x="12" y="134" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Server-Sent Events (SSE) streaming</text>
+      <rect x="12" y="154" width="234" height="52" rx="6" fill="#1e293b"/>
+      <text x="22" y="174" fill="#fbbf24" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">Confidence Threshold &amp; Fallback</text>
+      <text x="22" y="190" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">Logs low-confidence questions for review</text>
+      <text x="12" y="234" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">✓ Verified in RAG Service</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: POSTGRESQL & PGVECTOR (RIGHT) -->
+  <g transform="translate(690, 130)">
+    <rect width="270" height="500" rx="14" fill="url(#dbCard)" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="16" y="14" width="238" height="30" rx="6" fill="#1e293b"/>
+    <text x="28" y="34" fill="#10b981" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🗄️ POSTGRESQL + PGVECTOR</text>
+
+    <!-- Sub-block: pgvector Search -->
+    <g transform="translate(16, 54)">
+      <rect width="238" height="170" rx="8" fill="#0b0f19" stroke="#10b981" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">pgvector Cosine Search</text>
+      <text x="12" y="36" fill="#10b981" font-family="system-ui, sans-serif" font-size="10" font-weight="600">vector_db_service.py:20</text>
+      <text x="12" y="58" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• Cosine distance: &lt;=&gt; operator</text>
+      <text x="12" y="74" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• Enforces tenant isolation (widget_id)</text>
+      <text x="12" y="90" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• Ordered by distance ascending, limit top_k</text>
+      <text x="12" y="108" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">• 1536-Dimensional vector embeddings</text>
+      <text x="12" y="126" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">• HNSW approximate index supported</text>
+      <text x="12" y="154" fill="#34d399" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600">✓ Verified in VectorDBService</text>
+    </g>
+
+    <!-- Sub-block: Relational Entities -->
+    <g transform="translate(16, 234)">
+      <rect width="238" height="250" rx="8" fill="#0b0f19" stroke="#2a2e48" stroke-width="1"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">Relational Schema Entities</text>
+      <text x="12" y="36" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10" font-weight="600">app/models/models.py</text>
+      <text x="12" y="58" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• tenants (accounts, company, plan)</text>
+      <text x="12" y="74" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• widgets (allowed_domains, theme)</text>
+      <text x="12" y="90" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• documents (filename, file_size, url)</text>
+      <text x="12" y="106" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• document_chunks (content, embedding)</text>
+      <text x="12" y="122" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• unanswered_questions (inbox triage)</text>
+      <text x="12" y="138" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• feedback_ratings (positive/negative)</text>
+      <text x="12" y="154" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• leads (user contact capture)</text>
+      <text x="12" y="170" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• team_members &amp; audit_logs</text>
+      <rect x="12" y="186" width="214" height="34" rx="4" fill="#1e293b"/>
+      <text x="119" y="206" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600" text-anchor="middle">Single Unified Database Instance</text>
+      <text x="12" y="238" fill="#34d399" font-family="system-ui, sans-serif" font-size="9" font-weight="600">✓ Verified in SQLAlchemy Models</text>
+    </g>
+  </g>
+
+  <!-- Connective Arrows -->
+  <path d="M 320 180 L 360 180" fill="none" stroke="#06b6d4" stroke-width="1.8" marker-end="url(#arrowCyan)"/>
+  <path d="M 650 180 L 690 140" fill="none" stroke="#10b981" stroke-width="1.8" marker-end="url(#arrowGreen)"/>
+  <path d="M 650 360 L 690 320" fill="none" stroke="#a855f7" stroke-width="1.8" marker-end="url(#arrowPurple)"/>
+</svg>

@@ -7,11 +7,11 @@ export function getOrganizationJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Orythyn Inc.",
-    "alternateName": "Orythyn",
+    "name": "Orithyn Inc.",
+    "alternateName": "Orithyn",
     "url": "https://orithyn.com",
     "logo": "https://orithyn.com/favicon.ico",
-    "description": "Full-stack software engineering and AI product studio designing, building, and scaling custom web applications, AI knowledge assistants, and business workflow automation.",
+    "description": "Professional software development company engineering custom business software, web applications, mobile apps, backend APIs, management platforms, and AI automation.",
     "priceRange": "$$",
     "address": {
       "@type": "PostalAddress",
@@ -25,17 +25,16 @@ export function getOrganizationJsonLd() {
       "availableLanguage": ["English"]
     },
     "sameAs": [
-      "https://github.com/File8ite/Orithyn-website",
       "https://github.com/Orithyn"
     ],
     "knowsAbout": [
       "Custom Software Development",
       "Web Application Development",
-      "Artificial Intelligence & LLM RAG Systems",
-      "Business Process Automation",
-      "SLA Maintenance & Cloud Scaling",
-      "Next.js & React Engineering",
-      "TypeScript & High-Throughput Architectures"
+      "Mobile Application Development (React Native)",
+      "Backend & REST API Development",
+      "Business Management Systems",
+      "AI Solutions & Workflow Automation",
+      "Software Maintenance & Technical Support"
     ]
   };
 }
@@ -48,41 +47,71 @@ export function getServicesJsonLd() {
       {
         "@type": "Service",
         "position": 1,
-        "name": "Custom Web Applications & SaaS Development",
-        "description": "Modern, responsive, and secure web applications, admin control panels, and client portals built with Next.js and React.",
+        "name": "Custom Software Development",
+        "description": "Tailored software systems built to solve specific operational challenges, automate workflows, and replace rigid off-the-shelf software.",
         "provider": {
           "@type": "ProfessionalService",
-          "name": "Orythyn Inc."
+          "name": "Orithyn Inc."
         }
       },
       {
         "@type": "Service",
         "position": 2,
-        "name": "AI Knowledge Assistants & RAG Systems",
-        "description": "Private enterprise LLM integration, vector database search engines, and real-time conversational agents.",
+        "name": "Web Application Development",
+        "description": "Responsive, accessible, and fast web portals, client dashboards, and cloud platforms engineered with Next.js, React, and TypeScript.",
         "provider": {
           "@type": "ProfessionalService",
-          "name": "Orythyn Inc."
+          "name": "Orithyn Inc."
         }
       },
       {
         "@type": "Service",
         "position": 3,
-        "name": "Business Process & Workflow Automation",
-        "description": "Event-driven automation pipelines connecting CRMs, databases, notifications, and inventory systems.",
+        "name": "Mobile Application Development",
+        "description": "Cross-platform iOS and Android mobile applications engineered with React Native for unified business logic and native-grade mobile performance.",
         "provider": {
           "@type": "ProfessionalService",
-          "name": "Orythyn Inc."
+          "name": "Orithyn Inc."
         }
       },
       {
         "@type": "Service",
         "position": 4,
-        "name": "Dedicated Maintenance & SLA Support",
-        "description": "Ongoing technical maintenance, 99.99% uptime monitoring, cloud scaling, and dedicated senior engineering support.",
+        "name": "Backend & API Development",
+        "description": "Scalable REST APIs, relational and NoSQL database schemas, and robust backend microservices designed for data integrity and reliability.",
         "provider": {
           "@type": "ProfessionalService",
-          "name": "Orythyn Inc."
+          "name": "Orithyn Inc."
+        }
+      },
+      {
+        "@type": "Service",
+        "position": 5,
+        "name": "Business Management Systems",
+        "description": "Custom management software including school portals, hospital & clinic management, hotel reservations, and multi-location inventory platforms.",
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "Orithyn Inc."
+        }
+      },
+      {
+        "@type": "Service",
+        "position": 6,
+        "name": "AI Solutions & Business Automation",
+        "description": "Practical AI implementations, retrieval-augmented document assistants, vector search pipelines, and multi-step process automation.",
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "Orithyn Inc."
+        }
+      },
+      {
+        "@type": "Service",
+        "position": 7,
+        "name": "Software Maintenance & Technical Support",
+        "description": "Proactive system maintenance, security updates, dependency upgrades, database backups, bug resolution, and responsive technical support.",
+        "provider": {
+          "@type": "ProfessionalService",
+          "name": "Orithyn Inc."
         }
       }
     ]

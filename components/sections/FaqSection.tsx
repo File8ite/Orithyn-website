@@ -10,29 +10,29 @@ import { ChevronDown, HelpCircle, Sparkles } from "lucide-react";
 
 export const homepageFaqs = [
   {
-    question: "What types of software does Orythyn build?",
+    question: "What types of software does Orithyn build?",
     answer:
-      "Orythyn specializes in three primary engineering verticals: 1) Custom Web Applications & SaaS Portals (React, Next.js, TypeScript), 2) AI Knowledge Assistants & RAG Vector Engines, and 3) Business Process & Workflow Automation (connecting CRMs, inventory, and databases).",
+      "Orithyn develops custom software across seven core service areas: Custom Software Development, Web Applications, Native Mobile Applications (React Native), Backend & REST APIs, Business Management Systems, AI Solutions & Workflow Automation, and Software Maintenance. We apply these technical capabilities across eight target industry sectors, including Healthcare, Education, Hospitality, Real Estate, Retail, SMEs, Startups, and Transportation.",
   },
   {
     question: "How long does a typical software project take from start to launch?",
     answer:
-      "Timelines depend on scope complexity: MVP core releases typically take 2 to 4 weeks, full production platforms take 4 to 8 weeks, and high-scale custom enterprise systems range from 6 to 12 weeks with bi-weekly milestone demos.",
+      "Timelines depend on project scope: focused MVP releases typically take 2 to 4 weeks, standard business applications take 4 to 8 weeks, and larger custom management systems range from 6 to 12 weeks with staged milestone deliveries.",
   },
   {
-    question: "Do we own 100% of the source code and intellectual property?",
+    question: "How are source code ownership and project handovers handled?",
     answer:
-      "Yes, absolutely. Upon completion, 100% of the custom source code, documentation, repository access, and IP rights are transferred fully to your organization.",
+      "Source code ownership, repository access, and handover deliverables are formally specified in your project agreement and statement of work. Upon completion and fulfillment of agreed project milestones, custom codebases, configurations, and documentation are handed over to your organization according to contract terms.",
   },
   {
-    question: "What SLA uptime and technical maintenance support do you offer?",
+    question: "What maintenance and technical support do you offer after launch?",
     answer:
-      "We provide ongoing SLA support options featuring 99.99% uptime guarantees, 24/7 automated error monitoring, continuous security patching, and dedicated senior engineering response lines (<15 min response time).",
+      "We offer structured maintenance and technical support agreements including automated system health monitoring, routine security patching, bug fixes, database backup management, and responsive technical support from our engineering team.",
   },
   {
-    question: "How does the AI document assistant (RAG) work with our existing files?",
+    question: "How do your AI solutions integrate with existing business data?",
     answer:
-      "We build secure vector database pipelines that index your internal PDFs, documentation, and databases into private LLM embeddings. Your team can query enterprise knowledge instantly with sub-200ms response times while isolating your data from public LLM training.",
+      "We design secure vector database pipelines and private retrieval systems that index internal documents, manuals, or database records. Your team can query internal organizational knowledge with fast, context-grounded responses while keeping all sensitive data isolated from public model training.",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function FaqSection() {
           </Heading>
 
           <Text className="text-base sm:text-lg text-zinc-300">
-            Everything you need to know about partnering with Orythyn for software &amp; AI development.
+            Everything you need to know about partnering with Orithyn for software and digital solutions.
           </Text>
         </div>
 

@@ -13,11 +13,11 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-zinc-950/80 border-b border-zinc-800/80 transition-all">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-3 text-2xl font-bold tracking-tight text-white hover:text-yellow-400 transition">
+        <Link href="/" className="flex items-center gap-3 text-2xl font-bold tracking-tight text-white hover:text-amber-400 transition">
           <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-400 text-black font-mono text-lg font-extrabold shadow-md shadow-amber-500/20">
             O
           </span>
-          <span className="font-extrabold tracking-wider">ORYTHYN</span>
+          <span className="font-extrabold tracking-wider">ORITHYN</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -27,7 +27,7 @@ export default function Navbar() {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="text-sm font-medium text-zinc-300 transition hover:text-yellow-400"
+                  className="text-sm font-medium text-zinc-300 transition hover:text-amber-400"
                 >
                   {link.name}
                 </Link>
@@ -50,7 +50,7 @@ export default function Navbar() {
           className="inline-flex md:hidden items-center justify-center p-2 rounded-lg text-zinc-300 hover:bg-zinc-800 focus:outline-none"
           aria-label="Toggle navigation menu"
         >
-          {mobileMenuOpen ? <X className="h-6 w-6 text-yellow-400" /> : <Menu className="h-6 w-6" />}
+          {mobileMenuOpen ? <X className="h-6 w-6 text-amber-400" /> : <Menu className="h-6 w-6" />}
         </button>
       </div>
 
@@ -63,7 +63,7 @@ export default function Navbar() {
                 <Link
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block text-base font-medium text-zinc-200 hover:text-yellow-400"
+                  className="block text-base font-medium text-zinc-200 hover:text-amber-400"
                 >
                   {link.name}
                 </Link>

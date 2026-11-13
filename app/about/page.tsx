@@ -8,8 +8,8 @@ import Link from "next/link";
 import { ShieldCheck, Target, Users, Code2, ArrowRight, Award, Layers } from "lucide-react";
 
 export const metadata = {
-  title: "About Us | Orythyn Inc.",
-  description: "Learn about Orythyn Inc., our mission, engineering philosophy, and commitment to building reliable software products.",
+  title: "About Us | Orithyn Inc.",
+  description: "Learn about Orithyn Inc., our mission, engineering philosophy, and commitment to building reliable software products.",
 };
 
 export default function AboutPage() {
@@ -20,12 +20,12 @@ export default function AboutPage() {
         {/* Header Hero */}
         <Section className="py-16 md:py-24 border-b border-zinc-800/80 bg-zinc-900/40">
           <div className="max-w-3xl space-y-6 px-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-yellow-400">Company Overview</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Company Overview</span>
             <Heading level={1} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
               Engineering Software for Real Business Value.
             </Heading>
             <Text className="text-base sm:text-lg text-zinc-300 leading-relaxed">
-              Orythyn Inc. was founded on the belief that custom software development should be transparent, disciplined, and directly tied to measurable business outcomes.
+              Orithyn Inc. was founded on the belief that custom software development should be transparent, disciplined, and directly tied to measurable business outcomes.
             </Text>
           </div>
         </Section>
@@ -63,7 +63,7 @@ export default function AboutPage() {
               Led by Engineers &amp; Problem Solvers
             </Heading>
             <Text className="text-base text-zinc-300">
-              Orythyn is led by Chijioke Echefulachi Prince, working alongside experienced full-stack engineers, cloud architects, and product designers.
+              Orithyn is led by Chijioke Echefulachi Prince, working alongside experienced full-stack engineers, cloud architects, and product designers.
             </Text>
           </div>
 
@@ -86,7 +86,7 @@ export default function AboutPage() {
               <ShieldCheck className="h-6 w-6 text-yellow-400" />
               <h3 className="text-lg font-bold text-white">Reliability</h3>
               <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                From initial security audits to ongoing support SLAs, we ensure your software stays operational 24/7.
+                From initial security audits to ongoing support agreements, we ensure your software remains stable, secure, and maintained.
               </p>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function AboutPage() {
         <Section className="py-16 md:py-24 text-center">
           <div className="space-y-6 max-w-xl mx-auto px-4">
             <Heading level={2} className="text-3xl sm:text-4xl font-extrabold text-white">Ready to Start a Conversation?</Heading>
-            <Text className="text-base text-zinc-300">Discover how Orythyn can partner with your team on your next digital project.</Text>
+            <Text className="text-base text-zinc-300">Discover how Orithyn can partner with your team on your next digital project.</Text>
             <div className="pt-2">
               <Link href="/contact">
                 <Button variant="primary" className="h-12 px-8 inline-flex items-center gap-2">

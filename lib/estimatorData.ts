@@ -90,9 +90,9 @@ export const scopeTiers: ScopeTier[] = [
   },
   {
     id: "enterprise-tier",
-    name: "High-Scale & SLA Guaranteed",
+    name: "Production Platform + Dedicated Support",
     multiplier: 1.75,
-    description: "Dedicated infrastructure, zero-downtime CI/CD, and 24/7 SLA maintenance.",
+    description: "Dedicated cloud infrastructure, automated deployment pipelines, and structured maintenance.",
   },
 ];
 
@@ -149,8 +149,8 @@ export const featureAddons: FeatureAddon[] = [
   },
   {
     id: "sla-monitoring",
-    name: "24/7 SLA Monitoring & Security Audit",
-    description: "Automated error tracking, uptime monitoring, and vulnerability patching.",
+    name: "System Monitoring & Security Hardening",
+    description: "Automated error tracking, infrastructure health checks, and scheduled security updates.",
     category: "ops",
     minCost: 900,
     maxCost: 1600,

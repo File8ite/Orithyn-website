@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="100%" height="100%">
+  <defs>
+    <linearGradient id="orBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0a0a0c"/>
+      <stop offset="100%" stop-color="#050507"/>
+    </linearGradient>
+    <linearGradient id="orCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#18181b"/>
+      <stop offset="100%" stop-color="#0f0f12"/>
+    </linearGradient>
+    <marker id="arrowGold" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#eab308"/>
+    </marker>
+    <marker id="arrowEmerald" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#10b981"/>
+    </marker>
+    <marker id="arrowSky" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="660" fill="url(#orBg)"/>
+  <rect x="1" y="1" width="998" height="658" fill="none" stroke="#27272a" stroke-width="2"/>
+
+  <!-- Top Header -->
+  <g transform="translate(40, 32)">
+    <rect x="0" y="0" width="168" height="26" rx="13" fill="#713f12" fill-opacity="0.3" stroke="#eab308" stroke-width="1"/>
+    <text x="84" y="17" fill="#fde047" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1.5">VERIFIED ARCHITECTURE</text>
+    <text x="0" y="56" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="800">Orithyn Corporate Website — Lead Capture Architecture</text>
+    <text x="0" y="78" fill="#fde047" font-family="system-ui, sans-serif" font-size="12" font-weight="600">Next.js static export → Static hosting → Web3Forms contact submission</text>
+  </g>
+
+  <!-- COLUMN 1: STATIC EXPORT & HOSTING (LEFT) -->
+  <g transform="translate(40, 130)">
+    <rect width="280" height="500" rx="14" fill="url(#orCard)" stroke="#27272a" stroke-width="1.5"/>
+    <rect x="16" y="14" width="248" height="30" rx="6" fill="#27272a"/>
+    <text x="28" y="34" fill="#fde047" font-family="system-ui, sans-serif" font-size="12" font-weight="700">⚡ STATIC EXPORT &amp; HOSTING</text>
+
+    <!-- Sub-block: Next.js 16 Static Export -->
+    <g transform="translate(16, 54)">
+      <rect width="248" height="170" rx="8" fill="#09090b" stroke="#eab308" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Next.js 16 App Router</text>
+      <text x="12" y="38" fill="#eab308" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">output: "export" in next.config.ts</text>
+      <text x="12" y="60" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• Pre-renders all 15 routes at build time</text>
+      <text x="12" y="78" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• React 19 Client &amp; Server Components</text>
+      <text x="12" y="96" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• Tailwind CSS 4 utility-first styling</text>
+      <text x="12" y="114" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• Structured JSON-LD SEO schema</text>
+      <text x="12" y="132" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• Pure HTML/CSS/JS output bundle</text>
+      <text x="12" y="154" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">✓ Static Build Verified</text>
+    </g>
+
+    <!-- Sub-block: Static Hosting & Distribution -->
+    <g transform="translate(16, 234)">
+      <rect width="248" height="250" rx="8" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Static Hosting &amp; Deployment</text>
+      <text x="12" y="38" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">Deployment Architecture</text>
+      <text x="12" y="60" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="9.5">• 15 statically generated routes,</text>
+      <text x="20" y="74" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="9.5">suitable for deployment on static</text>
+      <text x="20" y="88" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="9.5">hosting or CDN infrastructure</text>
+      <text x="12" y="106" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10">• Immutable asset content hashing</text>
+      <text x="12" y="122" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10">• No application-managed custom API server</text>
+      <text x="12" y="138" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10">• No direct database connection needed</text>
+      <rect x="12" y="154" width="224" height="50" rx="6" fill="#27272a"/>
+      <text x="22" y="174" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">Standard Web Hosting Model</text>
+      <text x="22" y="190" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="9.5">Compatible with any static hosting platform</text>
+      <text x="12" y="234" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">✓ Verified Architecture</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: INTERACTIVE ESTIMATOR & FORM (CENTER) -->
+  <g transform="translate(360, 130)">
+    <rect width="290" height="500" rx="14" fill="url(#orCard)" stroke="#27272a" stroke-width="1.5"/>
+    <rect x="16" y="14" width="258" height="30" rx="6" fill="#27272a"/>
+    <text x="28" y="34" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🧮 INTERACTIVE ESTIMATOR &amp; FORM</text>
+
+    <!-- Sub-block: ProjectEstimator -->
+    <g transform="translate(16, 54)">
+      <rect width="258" height="170" rx="8" fill="#09090b" stroke="#38bdf8" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Project Estimator Engine</text>
+      <text x="12" y="38" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">components/estimator/ProjectEstimator.tsx</text>
+      <text x="12" y="60" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• 4-Step interactive scope selection</text>
+      <text x="12" y="78" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• Project Type, Scope Tier &amp; Add-on modules</text>
+      <text x="12" y="96" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• Dynamic budget &amp; turnaround calculation</text>
+      <text x="12" y="114" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• Encodes scope &amp; budget into /contact URL</text>
+      <text x="12" y="132" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• Preserves minimum and maximum estimates</text>
+      <text x="12" y="154" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">✓ Verified in Estimator Code</text>
+    </g>
+
+    <!-- Sub-block: ContactForm & Validation -->
+    <g transform="translate(16, 234)">
+      <rect width="258" height="250" rx="8" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Client Contact Form</text>
+      <text x="12" y="38" fill="#fde047" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">components/contact/ContactForm.tsx</text>
+      <text x="12" y="62" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• Reads scope parameters from URL</text>
+      <text x="12" y="80" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• Displays attached scope summary banner</text>
+      <text x="12" y="98" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• Client-side field &amp; email validation</text>
+      <text x="12" y="116" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• Honeypot trap field (botcheck)</text>
+      <text x="12" y="134" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10.5">• 5s submission cooldown timing checks</text>
+      <rect x="12" y="154" width="234" height="52" rx="6" fill="#27272a"/>
+      <text x="22" y="174" fill="#34d399" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">Accurate State Machine</text>
+      <text x="22" y="190" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="9.5">Success only on confirmed provider 200 OK</text>
+      <text x="12" y="234" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">✓ Verified in Form Code</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: WEB3FORMS & FALLBACK CHANNELS (RIGHT) -->
+  <g transform="translate(690, 130)">
+    <rect width="270" height="500" rx="14" fill="url(#orCard)" stroke="#27272a" stroke-width="1.5"/>
+    <rect x="16" y="14" width="238" height="30" rx="6" fill="#27272a"/>
+    <text x="28" y="34" fill="#10b981" font-family="system-ui, sans-serif" font-size="12" font-weight="700">📬 SUBMISSION &amp; FALLBACKS</text>
+
+    <!-- Sub-block: Web3Forms Submission -->
+    <g transform="translate(16, 54)">
+      <rect width="238" height="170" rx="8" fill="#09090b" stroke="#10b981" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">Web3Forms Form Processing</text>
+      <text x="12" y="36" fill="#10b981" font-family="system-ui, sans-serif" font-size="10" font-weight="600">api.web3forms.com/submit</text>
+      <text x="12" y="58" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• Public access key authentication</text>
+      <text x="12" y="74" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• Provider-side spam filtering</text>
+      <text x="12" y="90" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• Forwards enquiry to contact@orithyn.com</text>
+      <text x="12" y="108" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">• Access key read from environment</text>
+      <text x="12" y="126" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">• Never hardcoded into source files</text>
+      <text x="12" y="154" fill="#34d399" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600">✓ Primary Contact Route</text>
+    </g>
+
+    <!-- Sub-block: Fallback Channels -->
+    <g transform="translate(16, 234)">
+      <rect width="238" height="250" rx="8" fill="#09090b" stroke="#27272a" stroke-width="1"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">Alternative Contact Routes</text>
+      <text x="12" y="36" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="10" font-weight="600">lib/contactConfig.ts</text>
+      <text x="12" y="58" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• Structured mailto: link generator</text>
+      <text x="12" y="74" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="9.5">• Direct WhatsApp API chat link</text>
+      <text x="12" y="92" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">• Triggers when network or API fails</text>
+      <text x="12" y="108" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">• Pre-populates user message &amp; scope</text>
+      <text x="12" y="124" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">• Preserves entered draft data on error</text>
+      <rect x="12" y="146" width="214" height="58" rx="6" fill="#27272a"/>
+      <text x="20" y="166" fill="#fde047" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600">Graceful Channel Fallback</text>
+      <text x="20" y="180" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="8.5">Ensures visitors have multiple ways</text>
+      <text x="20" y="194" fill="#a1a1aa" font-family="system-ui, sans-serif" font-size="8.5">to reach the team if submissions fail</text>
+      <text x="12" y="238" fill="#34d399" font-family="system-ui, sans-serif" font-size="9.5" font-weight="600">✓ Verified in contactConfig.ts</text>
+    </g>
+  </g>
+
+  <!-- Connective Arrows -->
+  <path d="M 320 180 L 360 180" fill="none" stroke="#eab308" stroke-width="1.8" marker-end="url(#arrowGold)"/>
+  <path d="M 650 180 L 690 140" fill="none" stroke="#10b981" stroke-width="1.8" marker-end="url(#arrowEmerald)"/>
+  <path d="M 650 360 L 690 320" fill="none" stroke="#38bdf8" stroke-width="1.8" marker-end="url(#arrowSky)"/>
+</svg>

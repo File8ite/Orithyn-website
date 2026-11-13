@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="100%" height="100%">
+  <defs>
+    <linearGradient id="jhBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#090d16"/>
+      <stop offset="100%" stop-color="#040711"/>
+    </linearGradient>
+    <linearGradient id="jhCard" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#0b0f19"/>
+    </linearGradient>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#34d399"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 Z" fill="#c084fc"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="660" fill="url(#jhBg)"/>
+  <rect x="1" y="1" width="998" height="658" fill="none" stroke="#1e293b" stroke-width="2"/>
+
+  <!-- Top Header -->
+  <g transform="translate(40, 32)">
+    <rect x="0" y="0" width="168" height="26" rx="13" fill="#1e3a8a" fill-opacity="0.5" stroke="#3b82f6" stroke-width="1"/>
+    <text x="84" y="17" fill="#60a5fa" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="1.5">VERIFIED ARCHITECTURE</text>
+    <text x="0" y="56" fill="#ffffff" font-family="system-ui, sans-serif" font-size="22" font-weight="800">JobHunter — Mobile Application Architecture</text>
+    <text x="0" y="78" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">React Native client, native share-intent, local 6h TTL cache, Supabase Edge compute (Groq LLM), and multi-feed aggregation</text>
+  </g>
+
+  <!-- COLUMN 1: CLIENT APPLICATION (LEFT) -->
+  <g transform="translate(40, 130)">
+    <rect width="280" height="500" rx="14" fill="url(#jhCard)" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="16" y="14" width="248" height="30" rx="6" fill="#1e293b"/>
+    <text x="28" y="34" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="700">📱 CLIENT APPLICATION (EXPO)</text>
+
+    <!-- Sub-block: React Native & UI -->
+    <g transform="translate(16, 54)">
+      <rect width="248" height="98" rx="8" fill="#0b0f19" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">React Native 0.86 / Expo 57</text>
+      <text x="12" y="38" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• File-based Expo Router Navigation</text>
+      <text x="12" y="54" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• React 19 UI &amp; Reanimated Worklets</text>
+      <text x="12" y="70" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Strict TypeScript 6 Data Models</text>
+      <text x="12" y="86" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">✓ Implemented in Codebase</text>
+    </g>
+
+    <!-- Sub-block: Native Share & CV Extraction -->
+    <g transform="translate(16, 162)">
+      <rect width="248" height="114" rx="8" fill="#0b0f19" stroke="#3b82f6" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Native Share &amp; CV Ingestion</text>
+      <text x="12" y="38" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">expo-share-intent &amp; FileSystem</text>
+      <text x="12" y="56" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• OS Share Sheet (LinkedIn/Indeed URLs)</text>
+      <text x="12" y="72" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• PDF / Text Extraction (min 80 chars)</text>
+      <text x="12" y="88" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Printable character sanity validation</text>
+      <text x="12" y="104" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">✓ Implemented in Codebase</text>
+    </g>
+
+    <!-- Sub-block: Client Match Engine & Cache -->
+    <g transform="translate(16, 286)">
+      <rect width="248" height="198" rx="8" fill="#0b0f19" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Client Match Engine &amp; Cache</text>
+      <text x="12" y="38" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">Deterministic Heuristics</text>
+      <text x="12" y="56" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Word-boundary symbol regex (C++, C#, .NET)</text>
+      <text x="12" y="72" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Title score (0-25), Seniority &amp; Location</text>
+      <text x="12" y="88" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Cover letter template synthesis</text>
+      <text x="12" y="110" fill="#fde047" font-family="system-ui, sans-serif" font-size="11" font-weight="600">AsyncStorage Feed Cache</text>
+      <text x="12" y="126" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">• Six-hour local feed cache designed to reduce</text>
+      <text x="20" y="140" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">repeated upstream API requests and respect</text>
+      <text x="20" y="154" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">provider rate limits</text>
+      <text x="12" y="170" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">• Fallback to cache on network drop</text>
+      <text x="12" y="186" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">• Tracks saved, applied, interviews</text>
+      <text x="12" y="202" fill="#34d399" font-family="system-ui, sans-serif" font-size="10" font-weight="600">✓ Implemented in Codebase</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 2: SUPABASE & EDGE COMPUTE (CENTER) -->
+  <g transform="translate(360, 130)">
+    <rect width="290" height="500" rx="14" fill="url(#jhCard)" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="16" y="14" width="258" height="30" rx="6" fill="#1e293b"/>
+    <text x="28" y="34" fill="#c084fc" font-family="system-ui, sans-serif" font-size="12" font-weight="700">⚡ BACKEND &amp; SUPABASE EDGE</text>
+
+    <!-- Sub-block: Edge Functions -->
+    <g transform="translate(16, 54)">
+      <rect width="258" height="198" rx="8" fill="#0b0f19" stroke="#c084fc" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Supabase Deno Edge Functions</text>
+      <text x="12" y="38" fill="#c084fc" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">supabase/functions/</text>
+      <text x="12" y="58" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="600">• parse-cv (Groq LLM: Qwen 3.8)</text>
+      <text x="22" y="74" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Extracts skills, experience from CV text</text>
+      <text x="12" y="94" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="600">• audit-cv (Groq LLM: Qwen 3.8)</text>
+      <text x="22" y="110" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Audits candidate fit against job specs</text>
+      <text x="12" y="130" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="11" font-weight="600">• fetch-jsearch-jobs (RapidAPI)</text>
+      <text x="22" y="146" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">Proxies JSearch API; requires Auth session</text>
+      <rect x="12" y="162" width="234" height="24" rx="4" fill="#1e1b4b"/>
+      <text x="129" y="178" fill="#a5b4fc" font-family="system-ui, sans-serif" font-size="10" font-weight="600" text-anchor="middle">Server-Side GROQ_API_KEY &amp; Auth Gate</text>
+    </g>
+
+    <!-- Sub-block: Aggregator Engine -->
+    <g transform="translate(16, 262)">
+      <rect width="258" height="222" rx="8" fill="#0b0f19" stroke="#334155" stroke-width="1"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="12" font-weight="700">Multi-Feed Aggregator Engine</text>
+      <text x="12" y="38" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">services/jobApi.ts</text>
+      <text x="12" y="60" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Concurrent fetch via Promise.all</text>
+      <text x="12" y="78" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• In-flight request coalescing</text>
+      <text x="12" y="96" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• URL canonicalization (normalizeUrl)</text>
+      <text x="12" y="114" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Generic job board URL filtering</text>
+      <text x="12" y="132" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Exact ID &amp; Specific URL deduplication</text>
+      <text x="12" y="150" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10.5">• Graceful degradation if provider fails</text>
+      <rect x="12" y="168" width="234" height="42" rx="6" fill="#1e293b"/>
+      <text x="22" y="186" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="10.5" font-weight="600">Unified Schema Normalizer</text>
+      <text x="22" y="200" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">Maps disparate API payloads to common Job type</text>
+    </g>
+  </g>
+
+  <!-- COLUMN 3: EXTERNAL PROVIDERS & STATUS (RIGHT) -->
+  <g transform="translate(690, 130)">
+    <rect width="270" height="500" rx="14" fill="url(#jhCard)" stroke="#1e293b" stroke-width="1.5"/>
+    <rect x="16" y="14" width="238" height="30" rx="6" fill="#1e293b"/>
+    <text x="28" y="34" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">🌐 UPSTREAM INTEGRATIONS</text>
+
+    <!-- Source 1: Remotive (Active) -->
+    <g transform="translate(16, 54)">
+      <rect width="238" height="72" rx="8" fill="#0b0f19" stroke="#10b981" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">Remotive Public API</text>
+      <text x="12" y="36" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">remotive.com/api/remote-jobs</text>
+      <text x="12" y="52" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">Direct HTTPS • Category filtered</text>
+      <rect x="156" y="10" width="72" height="18" rx="4" fill="#065f46"/>
+      <text x="192" y="22" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">ACTIVE</text>
+    </g>
+
+    <!-- Source 2: Arbeitnow (Active) -->
+    <g transform="translate(16, 134)">
+      <rect width="238" height="72" rx="8" fill="#0b0f19" stroke="#10b981" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">Arbeitnow Public API</text>
+      <text x="12" y="36" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">arbeitnow.com/api/job-board-api</text>
+      <text x="12" y="52" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9.5">Direct HTTPS • European &amp; remote</text>
+      <rect x="156" y="10" width="72" height="18" rx="4" fill="#065f46"/>
+      <text x="192" y="22" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">ACTIVE</text>
+    </g>
+
+    <!-- Source 3: RemoteOK (Active Syndication) -->
+    <g transform="translate(16, 214)">
+      <rect width="238" height="80" rx="8" fill="#0b0f19" stroke="#10b981" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">RemoteOK API</text>
+      <text x="12" y="36" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">remoteok.com/api?tag=startup</text>
+      <text x="12" y="52" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="9.5">Code uses RemoteOK endpoint</text>
+      <text x="12" y="66" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">(Named fetchWellfoundJobs in code)</text>
+      <rect x="156" y="10" width="72" height="18" rx="4" fill="#065f46"/>
+      <text x="192" y="22" fill="#6ee7b7" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">ACTIVE</text>
+    </g>
+
+    <!-- Source 4: JSearch (Edge Proxied) -->
+    <g transform="translate(16, 302)">
+      <rect width="238" height="80" rx="8" fill="#0b0f19" stroke="#3b82f6" stroke-width="1.2"/>
+      <text x="12" y="20" fill="#ffffff" font-family="system-ui, sans-serif" font-size="11.5" font-weight="700">JSearch (RapidAPI)</text>
+      <text x="12" y="36" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">jsearch.p.rapidapi.com</text>
+      <text x="12" y="52" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="9.5">Requires Supabase Auth &amp; API Key</text>
+      <text x="12" y="66" fill="#64748b" font-family="system-ui, sans-serif" font-size="9">Returns [] if backend unconfigured</text>
+      <rect x="156" y="10" width="72" height="18" rx="4" fill="#1e3a8a"/>
+      <text x="192" y="22" fill="#93c5fd" font-family="system-ui, sans-serif" font-size="9" font-weight="700" text-anchor="middle">EDGE ONLY</text>
+    </g>
+
+    <!-- Discontinued / Planned Note -->
+    <g transform="translate(16, 390)">
+      <rect width="238" height="88" rx="8" fill="#0b0f19" stroke="#334155" stroke-width="1" stroke-dasharray="4 3"/>
+      <text x="12" y="20" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11" font-weight="700">Distinction Note: Wellfound</text>
+      <text x="12" y="38" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">Wellfound (AngelList) has NO direct</text>
+      <text x="12" y="52" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">public API in code; legacy function name</text>
+      <text x="12" y="66" fill="#64748b" font-family="system-ui, sans-serif" font-size="9.5">fetches RemoteOK startup syndication.</text>
+      <text x="12" y="80" fill="#eab308" font-family="system-ui, sans-serif" font-size="9" font-weight="600">✓ Accurate to source code</text>
+    </g>
+  </g>
+
+  <!-- Connective Arrows -->
+  <path d="M 320 220 L 360 140" fill="none" stroke="#c084fc" stroke-width="1.8" marker-end="url(#arrowPurple)"/>
+  <path d="M 320 380 L 360 380" fill="none" stroke="#38bdf8" stroke-width="1.8" marker-end="url(#arrowBlue)"/>
+  <path d="M 650 140 L 690 330" fill="none" stroke="#38bdf8" stroke-width="1.5" marker-end="url(#arrowBlue)"/>
+  <path d="M 650 380 L 690 90" fill="none" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <path d="M 650 380 L 690 170" fill="none" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+  <path d="M 650 380 L 690 250" fill="none" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrowGreen)"/>
+</svg>

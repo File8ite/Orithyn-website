@@ -14,16 +14,15 @@ import {
   Bot, 
   Workflow, 
   ShieldCheck, 
-  TrendingUp, 
-  Users, 
-  Zap, 
   Layers, 
   Activity,
-  Check
+  Check,
+  Server,
+  Smartphone
 } from "lucide-react";
 
 export default function Hero() {
-  const [activeTab, setActiveTab] = useState<"web" | "ai" | "automation" | "sla">("web");
+  const [activeTab, setActiveTab] = useState<"web" | "ai" | "automation" | "support">("web");
 
   return (
     <Section className="relative overflow-hidden pt-8 pb-16 md:py-20 lg:py-24">
@@ -35,51 +34,51 @@ export default function Hero() {
         <div className="lg:col-span-6 space-y-6 md:space-y-7">
           {/* Badge Pill */}
           <div className="inline-flex items-center gap-2 rounded-full border border-amber-500/40 bg-amber-500/10 px-4 py-1.5 text-xs font-bold text-amber-300 shadow-md shadow-amber-500/10 backdrop-blur-md">
-            <Sparkles className="h-3.5 w-3.5 text-amber-400 animate-pulse" />
-            <span className="tracking-wider uppercase">Custom Software &amp; AI Engineering Studio</span>
+            <Sparkles className="h-3.5 w-3.5 text-amber-400" />
+            <span className="tracking-wider uppercase">Custom Software Development Company</span>
           </div>
 
-          {/* Primary Hero H1 - Crystal Clear One-Glance Headline */}
+          {/* Primary Hero H1 - Crystal Clear Business Value Headline */}
           <Heading level={1} className="text-4xl font-black tracking-tight sm:text-5xl lg:text-6xl leading-[1.12]">
-            <span className="text-white drop-shadow-md">We Build Custom</span>{" "}
-            <span className="inline-block animate-gold-shimmer font-black drop-shadow-sm">
-              Web Apps, AI Products &amp; Automation.
+            <span className="text-white drop-shadow-md">Technology That Moves</span>{" "}
+            <span className="text-amber-400 font-black drop-shadow-sm">
+              Your Business Forward.
             </span>
           </Heading>
 
           {/* Sub-headline / Direct Value Clarification */}
           <Text className="text-base sm:text-lg md:text-xl text-zinc-300 leading-relaxed max-w-2xl font-normal">
-            Orythyn partners with ambitious businesses and founders to design, develop, and scale custom web platforms, AI assistants, and automated workflow systems built for high performance.
+            We design and build custom software, web applications, mobile apps and intelligent business systems that help organisations operate better, serve customers and grow.
           </Text>
 
           {/* At-a-Glance Delivery Badges */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 pt-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
             <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800 text-xs sm:text-sm font-medium text-zinc-200">
               <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-amber-500/15 text-amber-400 font-bold shrink-0">
                 <LayoutDashboard className="h-4 w-4" />
               </span>
-              <span>Custom Web Apps &amp; SaaS</span>
+              <span>Custom Business Software</span>
             </div>
 
             <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800 text-xs sm:text-sm font-medium text-zinc-200">
               <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-amber-500/15 text-amber-400 font-bold shrink-0">
-                <Bot className="h-4 w-4" />
+                <Smartphone className="h-4 w-4" />
               </span>
-              <span>AI Agents &amp; Knowledge Systems</span>
+              <span>Web &amp; Mobile Apps (React Native)</span>
             </div>
 
             <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800 text-xs sm:text-sm font-medium text-zinc-200">
               <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-amber-500/15 text-amber-400 font-bold shrink-0">
                 <Workflow className="h-4 w-4" />
               </span>
-              <span>Business Process Automation</span>
+              <span>Business Management Systems</span>
             </div>
 
             <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-zinc-900/80 border border-zinc-800 text-xs sm:text-sm font-medium text-zinc-200">
               <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-amber-500/15 text-amber-400 font-bold shrink-0">
                 <ShieldCheck className="h-4 w-4" />
               </span>
-              <span>Ongoing SLA &amp; Support</span>
+              <span>Maintenance &amp; Technical Support</span>
             </div>
           </div>
 
@@ -87,29 +86,29 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
             <Link href="/contact" className="w-full sm:w-auto">
               <Button variant="primary" className="w-full sm:w-auto h-12 px-7 text-base font-extrabold inline-flex items-center justify-center gap-2 shadow-xl shadow-amber-500/25 transition-transform hover:scale-[1.02]">
-                Book a Strategy Call <ArrowRight className="h-4 w-4" />
+                Discuss Your Project <ArrowRight className="h-4 w-4" />
               </Button>
             </Link>
             <Link href="/services" className="w-full sm:w-auto">
               <Button variant="secondary" className="w-full sm:w-auto h-12 px-7 text-base font-semibold inline-flex items-center justify-center gap-2">
-                Explore Services
+                Explore Our Services
               </Button>
             </Link>
           </div>
 
-          {/* Guarantee Checklist */}
+          {/* Value Props Checklist */}
           <div className="pt-4 border-t border-zinc-800/80 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs sm:text-sm font-medium text-zinc-300">
             <div className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0" />
-              <span className="text-zinc-200 font-semibold">100% Custom Codebase</span>
+              <span className="text-zinc-200 font-semibold">Contracted Code Ownership</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0" />
-              <span className="text-zinc-200 font-semibold">Production SLA Guarantees</span>
+              <span className="text-zinc-200 font-semibold">Dedicated Technical Support</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle2 className="h-4 w-4 text-amber-400 shrink-0" />
-              <span className="text-zinc-200 font-semibold">Fast Turnaround</span>
+              <span className="text-zinc-200 font-semibold">Structured Delivery Process</span>
             </div>
           </div>
         </div>
@@ -127,7 +126,7 @@ export default function Hero() {
                 </div>
                 <span className="text-xs font-mono text-amber-400 font-semibold flex items-center gap-1.5">
                   <Layers className="h-3.5 w-3.5 text-amber-400" />
-                  Interactive Solutions Deck
+                  Solution Architecture Deck
                 </span>
               </div>
 
@@ -153,7 +152,7 @@ export default function Hero() {
                       : "text-zinc-400 hover:text-white hover:bg-zinc-800/60"
                   }`}
                 >
-                  AI Products
+                  AI Solutions
                 </button>
                 <button
                   type="button"
@@ -168,14 +167,14 @@ export default function Hero() {
                 </button>
                 <button
                   type="button"
-                  onClick={() => setActiveTab("sla")}
+                  onClick={() => setActiveTab("support")}
                   className={`py-2 px-1 text-center rounded-lg transition ${
-                    activeTab === "sla"
+                    activeTab === "support"
                       ? "bg-amber-500 text-black font-bold shadow"
                       : "text-zinc-400 hover:text-white hover:bg-zinc-800/60"
                   }`}
                 >
-                  SLA Support
+                  Support
                 </button>
               </div>
             </div>
@@ -188,38 +187,38 @@ export default function Hero() {
                   <div className="flex items-center justify-between border-b border-zinc-800/60 pb-3">
                     <div className="flex items-center gap-2">
                       <LayoutDashboard className="h-4 w-4 text-amber-400" />
-                      <span className="text-sm font-bold text-white">Custom Web Portal &amp; Analytics</span>
+                      <span className="text-sm font-bold text-white">Custom Web &amp; Business Portals</span>
                     </div>
                     <span className="text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-semibold">
-                      Live Dashboard
+                      Responsive Architecture
                     </span>
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
                     <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-800 space-y-1">
                       <span className="text-[11px] text-zinc-400 flex items-center gap-1">
-                        <TrendingUp className="h-3 w-3 text-amber-400" /> Monthly Growth
+                        <Server className="h-3 w-3 text-amber-400" /> Architecture
                       </span>
-                      <p className="text-lg font-bold text-white">+34.8%</p>
-                      <p className="text-[10px] text-zinc-400">Automated reporting sync</p>
+                      <p className="text-base font-bold text-white">Component-Driven</p>
+                      <p className="text-[10px] text-zinc-400">React 19 &amp; Next.js 16</p>
                     </div>
 
                     <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-800 space-y-1">
                       <span className="text-[11px] text-zinc-400 flex items-center gap-1">
-                        <Users className="h-3 w-3 text-amber-400" /> Active Users
+                        <ShieldCheck className="h-3 w-3 text-amber-400" /> Data Layer
                       </span>
-                      <p className="text-lg font-bold text-white">48,290</p>
-                      <p className="text-[10px] text-zinc-400">Sub-second load times</p>
+                      <p className="text-base font-bold text-white">PostgreSQL Schemas</p>
+                      <p className="text-[10px] text-zinc-400">Strict type safety &amp; validation</p>
                     </div>
                   </div>
 
                   <div className="p-3 rounded-xl bg-amber-950/20 border border-amber-500/30 space-y-2 text-xs text-zinc-300">
                     <div className="flex items-center justify-between">
-                      <span className="font-semibold text-amber-400">Target Deliverable:</span>
+                      <span className="font-semibold text-amber-400">Target Deliverables:</span>
                       <span className="font-mono text-zinc-400 text-[11px]">Next.js 16 + TypeScript</span>
                     </div>
                     <p className="text-zinc-300 text-[12px] leading-relaxed">
-                      Custom responsive admin interfaces, customer portals, billing integrations, and real-time operational platforms.
+                      Custom responsive admin interfaces, client portals, billing integrations, and operational tools designed for your specific business workflow.
                     </p>
                   </div>
                 </div>
@@ -231,34 +230,34 @@ export default function Hero() {
                   <div className="flex items-center justify-between border-b border-zinc-800/60 pb-3">
                     <div className="flex items-center gap-2">
                       <Bot className="h-4 w-4 text-amber-400" />
-                      <span className="text-sm font-bold text-white">Internal AI Assistant (Orythyn Chata)</span>
+                      <span className="text-sm font-bold text-white">Document Knowledge &amp; Query Assistant</span>
                     </div>
                     <span className="text-[11px] font-mono bg-amber-500/10 text-amber-400 border border-amber-500/30 px-2 py-0.5 rounded-full font-semibold">
-                      LLM Pipeline
+                      Knowledge Retrieval
                     </span>
                   </div>
 
                   <div className="space-y-2.5 font-mono text-xs">
                     <div className="p-3 rounded-lg bg-zinc-900 text-zinc-300 border border-zinc-800">
-                      <span className="text-amber-400 font-bold">Query:</span> Search 10,000 internal SLA contracts for renewal clauses.
+                      <span className="text-amber-400 font-bold">Query:</span> Search operational manuals for equipment maintenance guidelines.
                     </div>
                     <div className="p-3 rounded-lg bg-amber-950/30 text-zinc-200 border border-amber-500/30 space-y-1">
                       <div className="flex items-center justify-between text-[11px] text-amber-400 font-bold">
-                        <span>Chata AI Engine:</span>
-                        <span className="text-zinc-400 font-mono">Response in 118ms</span>
+                        <span>Orithyn Assistant:</span>
+                        <span className="text-zinc-400 font-mono">Context-Verified Retrieval</span>
                       </div>
                       <p className="text-[11px] text-zinc-300 font-sans leading-relaxed">
-                        Extracted 14 renewal clauses. Automated alerts sent to account managers.
+                        Extracted maintenance steps with source document references.
                       </p>
                     </div>
                   </div>
 
                   <div className="flex items-center justify-between text-xs text-zinc-400 pt-1 border-t border-zinc-800/50">
                     <span className="flex items-center gap-1.5 text-zinc-300">
-                      <Check className="h-3.5 w-3.5 text-emerald-400" /> Vector Database RAG
+                      <Check className="h-3.5 w-3.5 text-emerald-400" /> Vector Document Search
                     </span>
                     <span className="flex items-center gap-1.5 text-zinc-300">
-                      <Check className="h-3.5 w-3.5 text-emerald-400" /> Enterprise Isolation
+                      <Check className="h-3.5 w-3.5 text-emerald-400" /> Context Isolation
                     </span>
                   </div>
                 </div>
@@ -273,72 +272,72 @@ export default function Hero() {
                       <span className="text-sm font-bold text-white">Automated Business Workflow</span>
                     </div>
                     <span className="text-[11px] font-mono bg-blue-500/10 text-blue-400 border border-blue-500/30 px-2 py-0.5 rounded-full font-semibold">
-                      Active Dispatch
+                      Event Automation
                     </span>
                   </div>
 
                   <div className="space-y-2">
                     <div className="flex items-center justify-between p-2.5 rounded-lg bg-zinc-900 border border-zinc-800 text-xs">
                       <span className="flex items-center gap-2 text-zinc-300">
-                        <Zap className="h-3.5 w-3.5 text-amber-400" /> 1. Customer Lead Received
+                        <Check className="h-3.5 w-3.5 text-amber-400" /> 1. Form Enquiry Received
                       </span>
-                      <span className="text-emerald-400 font-mono text-[11px]">Instant</span>
+                      <span className="text-emerald-400 font-mono text-[11px]">Triggered Event</span>
                     </div>
                     <div className="flex items-center justify-between p-2.5 rounded-lg bg-zinc-900 border border-zinc-800 text-xs">
                       <span className="flex items-center gap-2 text-zinc-300">
-                        <Bot className="h-3.5 w-3.5 text-amber-400" /> 2. AI Lead Qualification &amp; Scoring
+                        <Bot className="h-3.5 w-3.5 text-amber-400" /> 2. Rule-Based Validation &amp; Scoring
                       </span>
-                      <span className="text-emerald-400 font-mono text-[11px]">99.4% Accuracy</span>
+                      <span className="text-emerald-400 font-mono text-[11px]">Standardized Flow</span>
                     </div>
                     <div className="flex items-center justify-between p-2.5 rounded-lg bg-amber-950/30 border border-amber-500/30 text-xs">
                       <span className="flex items-center gap-2 text-amber-300 font-semibold">
-                        <Workflow className="h-3.5 w-3.5 text-amber-400" /> 3. Sync to CRM &amp; Dispatch Alert
+                        <Workflow className="h-3.5 w-3.5 text-amber-400" /> 3. Dispatch to Operations &amp; Team Alert
                       </span>
-                      <span className="text-amber-400 font-mono text-[11px]">Triggered</span>
+                      <span className="text-amber-400 font-mono text-[11px]">Automated Routing</span>
                     </div>
                   </div>
 
                   <p className="text-[11px] text-zinc-400 leading-relaxed">
-                    Eliminate repetitive manual steps, data entry errors, and sluggish multi-tool handoffs with custom event-driven pipelines.
+                    Eliminate repetitive manual steps, spreadsheet errors, and sluggish multi-tool handoffs with custom event-driven pipelines.
                   </p>
                 </div>
               )}
 
-              {/* TAB 4: SLA SUPPORT & SCALING */}
-              {activeTab === "sla" && (
+              {/* TAB 4: SUPPORT & MAINTENANCE */}
+              {activeTab === "support" && (
                 <div className="space-y-4 animate-in fade-in duration-300">
                   <div className="flex items-center justify-between border-b border-zinc-800/60 pb-3">
                     <div className="flex items-center gap-2">
                       <ShieldCheck className="h-4 w-4 text-amber-400" />
-                      <span className="text-sm font-bold text-white">SLA Support &amp; Maintenance</span>
+                      <span className="text-sm font-bold text-white">Technical Support &amp; Maintenance</span>
                     </div>
                     <span className="text-[11px] font-mono bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-semibold">
-                      Guaranteed SLA
+                      Ongoing Support
                     </span>
                   </div>
 
                   <div className="grid grid-cols-2 gap-3">
                     <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-800 space-y-1">
                       <span className="text-[11px] text-zinc-400 flex items-center gap-1">
-                        <Activity className="h-3 w-3 text-amber-400" /> Uptime Guarantee
+                        <Activity className="h-3 w-3 text-amber-400" /> System Health
                       </span>
-                      <p className="text-lg font-bold text-emerald-400">99.99%</p>
-                      <p className="text-[10px] text-zinc-400">24/7 Automated monitoring</p>
+                      <p className="text-base font-bold text-emerald-400">Proactive Monitoring</p>
+                      <p className="text-[10px] text-zinc-400">Regular health &amp; uptime checks</p>
                     </div>
 
                     <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-800 space-y-1">
                       <span className="text-[11px] text-zinc-400 flex items-center gap-1">
-                        <ShieldCheck className="h-3 w-3 text-amber-400" /> Response Time
+                        <ShieldCheck className="h-3 w-3 text-amber-400" /> Support Model
                       </span>
-                      <p className="text-lg font-bold text-white">&lt; 15 Mins</p>
-                      <p className="text-[10px] text-zinc-400">Dedicated engineering line</p>
+                      <p className="text-base font-bold text-white">Structured Escalation</p>
+                      <p className="text-[10px] text-zinc-400">Defined triage for critical issues</p>
                     </div>
                   </div>
 
                   <div className="p-3 rounded-xl bg-zinc-900 border border-zinc-800 text-xs text-zinc-300 space-y-1">
-                    <span className="font-semibold text-white">Included in SLA Support:</span>
+                    <span className="font-semibold text-white">Included in Support Agreements:</span>
                     <p className="text-zinc-400 text-[11px] leading-relaxed">
-                      Continuous security updates, database backups, performance optimization, and proactive feature upgrades.
+                      Continuous security updates, database backup verification, performance optimization, and proactive feature enhancements.
                     </p>
                   </div>
                 </div>

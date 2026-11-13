@@ -21,7 +21,7 @@ export default function FeaturedProduct() {
               <span className="inline-flex items-center gap-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/30 px-3 py-1 text-xs font-semibold text-yellow-400">
                 <Sparkles className="h-3.5 w-3.5" /> {product.badge}
               </span>
-              <span className="text-xs font-mono text-zinc-400">{product.status}</span>
+              <span className="text-xs font-mono text-zinc-400 bg-zinc-950 px-2.5 py-0.5 rounded-full border border-zinc-800">{product.status}</span>
             </div>
 
             <Heading level={2} className="text-3xl sm:text-4xl font-extrabold text-white">
@@ -46,7 +46,7 @@ export default function FeaturedProduct() {
             <div className="pt-4 flex items-center gap-4">
               <Link href="/contact">
                 <Button variant="primary" className="h-11 px-6 text-sm inline-flex items-center gap-2">
-                  Request Private Demo <ArrowRight className="h-4 w-4" />
+                  Discuss a Similar System <ArrowRight className="h-4 w-4" />
                 </Button>
               </Link>
             </div>
@@ -54,15 +54,15 @@ export default function FeaturedProduct() {
 
           <div className="lg:col-span-5 border border-zinc-800 rounded-2xl bg-zinc-950 p-6 space-y-4 shadow-inner">
             <div className="flex items-center justify-between text-xs font-mono text-zinc-400 border-b border-zinc-800 pb-3">
-              <span className="flex items-center gap-2"><Bot className="h-4 w-4 text-yellow-400"/> Chata Engine v1.0</span>
-              <span className="text-yellow-400 font-semibold">Active</span>
+              <span className="flex items-center gap-2"><Bot className="h-4 w-4 text-yellow-400"/> Chata Prototype Workflow</span>
+              <span className="text-yellow-400 font-semibold">Interactive Demo</span>
             </div>
             <div className="space-y-3 font-mono text-xs">
               <div className="p-3 rounded-lg bg-zinc-900 text-zinc-300 border border-zinc-800">
-                <span className="text-yellow-400 font-semibold">User:</span> How can Orythyn automate our customer query routing?
+                <span className="text-yellow-400 font-semibold">User:</span> How can Orithyn automate our customer query routing?
               </div>
               <div className="p-3 rounded-lg bg-amber-950/30 text-zinc-200 border border-yellow-500/20">
-                <span className="text-yellow-400 font-semibold">Chata AI:</span> By integrating Orythyn knowledge pipelines, your incoming requests are parsed, classified, and dispatched in &lt;120ms with 99.4% accuracy.
+                <span className="text-yellow-400 font-semibold">Chata Assistant:</span> By integrating structured query workflows, incoming customer inquiries are automatically classified and routed to the appropriate department for prompt review.
               </div>
             </div>
           </div>

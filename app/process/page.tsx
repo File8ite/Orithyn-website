@@ -11,9 +11,9 @@ import Button from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Engineering Process & Methodology | Orythyn Inc.",
+  title: "Engineering Process & Methodology | Orithyn Inc.",
   description:
-    "Learn about Orythyn's disciplined software delivery process: Discovery, Architecture, Agile Sprints, Testing, Launch & SLA Maintenance.",
+    "Learn about Orithyn's disciplined software delivery process: Discovery, Architecture, Agile Sprints, Testing, Launch & Ongoing Support.",
   alternates: {
     canonical: "/process",
   },
@@ -35,7 +35,7 @@ export default function ProcessPage() {
           <div className="max-w-3xl space-y-4 px-4">
             <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Engineering Methodology</span>
             <Heading level={1} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
-              Disciplined Delivery from Concept to SLA.
+              Disciplined Delivery from Concept to Production.
             </Heading>
             <Text className="text-base sm:text-lg text-zinc-300 leading-relaxed">
               We eliminate guesswork with a structured, transparent software engineering workflow built on accountability and clean architecture.
@@ -44,7 +44,7 @@ export default function ProcessPage() {
         </Section>
 
         {/* Process Component */}
-        <Process />
+        <Process showCta={false} />
 
         {/* Action Call */}
         <Section className="py-16 md:py-24 text-center">

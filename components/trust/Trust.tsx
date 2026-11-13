@@ -10,7 +10,7 @@ export default function Trust() {
       <div className="max-w-3xl text-center mx-auto space-y-4 px-4">
         <span className="text-xs font-bold uppercase tracking-widest text-yellow-400">Core Engineering Principles</span>
         <Heading level={2} className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-          Why Organizations Trust Orythyn
+          Why Organizations Trust Orithyn
         </Heading>
         <Text className="text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto">
           Great software is built on more than code. It is built on disciplined engineering, transparent communication, and long-term partnership.

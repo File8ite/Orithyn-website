@@ -10,14 +10,14 @@ export interface Product {
 export const featuredProducts: Product[] = [
   {
     name: "Chata",
-    tagline: "AI-Powered Conversational Knowledge Assistant",
-    description: "An internal product built by Orythyn engineering to demonstrate our capabilities in LLM integration, real-time streaming, and secure enterprise knowledge retrieval.",
+    tagline: "Group Travel & AI Routing Prototype",
+    description: "An internal proof-of-concept application built by Orithyn engineering to explore relational booking schemas, waitlist management, and conversational inquiry routing.",
     highlights: [
-      "Real-time streaming responses with context isolation",
-      "Instant indexing of documents and enterprise knowledge bases",
-      "Built with Next.js 16, React 19, and scalable AI infrastructure",
+      "Relational booking schema with PostgreSQL and Node.js",
+      "Interactive waitlist lead capture and route filtering",
+      "Modular full-stack architecture built with React 19, TypeScript, and Vite",
     ],
-    status: "Active Beta",
-    badge: "Orythyn Labs",
+    status: "Internal Prototype",
+    badge: "Orithyn Labs",
   },
 ];

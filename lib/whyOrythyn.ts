@@ -6,28 +6,39 @@ export interface Differentiator {
 
 export const differentiators: Differentiator[] = [
   {
-    title: "Business-First Thinking",
-    description: "We don't build tech for the sake of tech. Every feature is aligned directly with your business goals, ROI, and operational efficiency.",
-    iconName: "TrendingUp",
+    title: "Solutions Designed Around Actual Business Requirements",
+    description:
+      "We build software that fits how your business actually operates, rather than forcing your team into the rigid constraints of generic off-the-shelf tools.",
+    iconName: "Target",
   },
   {
-    title: "Engineering Discipline",
-    description: "Strict TypeScript standards, automated testing, modern architecture, and clean documentation mean software that lasts.",
-    iconName: "ShieldCheck",
-  },
-  {
-    title: "Transparent Communication",
-    description: "No technical jargon or hidden roadblocks. Clear weekly sprint updates, shared roadmaps, and open channels.",
+    title: "Clear Communication Throughout Development",
+    description:
+      "No confusing technical jargon or hidden roadblocks. You receive regular milestone demos, written sprint updates, and direct access to your engineering team.",
     iconName: "MessageSquare",
   },
   {
-    title: "Long-Term Partnership",
-    description: "We don't vanish after launch. We support, optimize, and scale your product as your business evolves.",
-    iconName: "Handshake",
+    title: "Maintainable Software Architecture",
+    description:
+      "We write clean, type-safe, modular codebases designed to be dependable today and straightforward to extend or update as your organization grows.",
+    iconName: "Layers",
   },
   {
-    title: "Continuous Improvement",
-    description: "Constant iteration, performance profiling, and responsible AI adoption to keep your software ahead of the competition.",
-    iconName: "Zap",
+    title: "Practical & Thoughtful Technology Choices",
+    description:
+      "We select proven, battle-tested technologies like Next.js, React Native, TypeScript, and PostgreSQL that deliver lasting value over fleeting technical fads.",
+    iconName: "Cpu",
+  },
+  {
+    title: "Transparent Project Scope & Delivery Expectations",
+    description:
+      "Predictable timelines, clearly defined deliverables, and transparent estimates ensure complete alignment before writing a single line of code.",
+    iconName: "Compass",
+  },
+  {
+    title: "Continued Technical Support After Delivery",
+    description:
+      "We do not vanish at launch. We provide structured post-delivery support agreements, automated health monitoring, and security updates as agreed.",
+    iconName: "ShieldCheck",
   },
 ];

@@ -8,9 +8,9 @@ import JsonLd from "@/components/seo/JsonLd";
 import { getBreadcrumbJsonLd } from "@/lib/jsonLd";
 
 export const metadata = {
-  title: "Project Cost & Scope Calculator | Orythyn Inc.",
+  title: "Project Cost & Scope Calculator | Orithyn Inc.",
   description:
-    "Interactively calculate estimated budget ranges and turnaround timelines for custom web apps, AI assistants, and workflow automation.",
+    "Interactively calculate estimated budget ranges and turnaround timelines for custom web apps, mobile apps, business systems, and AI automation.",
   alternates: {
     canonical: "/estimator",
   },
@@ -30,7 +30,7 @@ export default function EstimatorPage() {
         {/* Page Hero */}
         <Section className="py-16 md:py-20 border-b border-zinc-800/80 bg-zinc-900/40">
           <div className="max-w-3xl space-y-4 px-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Instant Scope Tool</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Interactive Scope Tool</span>
             <Heading level={1} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
               Project Cost &amp; Timeline Calculator.
             </Heading>

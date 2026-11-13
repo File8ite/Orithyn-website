@@ -8,9 +8,9 @@ import JsonLd from "@/components/seo/JsonLd";
 import { getBreadcrumbJsonLd } from "@/lib/jsonLd";
 
 export const metadata = {
-  title: "Portfolio & Case Studies | Orythyn Inc.",
+  title: "Projects & Reference Architectures | Orithyn Inc.",
   description:
-    "Explore real-world software applications, AI chatbots, and automated data pipelines engineered by Orythyn Inc.",
+    "Explore internal software applications, AI prototypes, and technical architectures engineered by Orithyn Inc.",
   alternates: {
     canonical: "/portfolio",
   },
@@ -28,14 +28,14 @@ export default function PortfolioPage() {
       <Navbar />
       <main className="flex-1">
         {/* Page Hero */}
-        <Section className="py-16 md:py-24 border-b border-zinc-800/80 bg-zinc-900/40">
+        <Section id="portfolio-hero" className="py-16 md:py-24 border-b border-zinc-800/80 bg-zinc-900/40">
           <div className="max-w-3xl space-y-4 px-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Engineering Work</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-amber-400">Technical Work</span>
             <Heading level={1} className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
-              Software &amp; AI Products Built for Scale.
+              Projects &amp; Reference Architectures.
             </Heading>
             <Text className="text-base sm:text-lg text-zinc-300 leading-relaxed">
-              Explore our portfolio of production-ready web platforms, conversational AI chatbots, and automated business data pipelines.
+              Explore our internal platforms, conversational AI prototypes, and technical reference architectures built to solve real business challenges.
             </Text>
           </div>
         </Section>

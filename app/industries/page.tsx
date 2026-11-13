@@ -11,9 +11,9 @@ import Button from "@/components/ui/Button";
 import { ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Industries & Domain Expertise | Orythyn Inc.",
+  title: "Industries & Sector Solutions",
   description:
-    "Tailored software engineering, AI assistants, and workflow automation for SMEs, Startups, Schools, NGOs, and E-Commerce.",
+    "Custom software development and digital management systems for Healthcare, Education, Hospitality, Real Estate, Retail, SMEs, Startups, and Logistics.",
   alternates: {
     canonical: "/industries",
   },

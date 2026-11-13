@@ -12,6 +12,7 @@ import {
   featureAddons,
   calculateProjectEstimate,
 } from "@/lib/estimatorData";
+import { mapProjectTypeToService, mapBudgetRange } from "@/lib/contactConfig";
 import {
   LayoutDashboard,
   Bot,
@@ -64,8 +65,23 @@ export default function ProjectEstimator() {
     setStep(1);
   };
 
-  // Encoded URL string for contact pre-fill
-  const contactUrl = `/contact?scope=${encodeURIComponent(estimate.summaryText)}`;
+  // Encoded URL string for structured contact pre-fill
+  const contactUrl = useMemo(() => {
+    const serviceName = mapProjectTypeToService(estimate.projectType.id);
+    const budgetRange = mapBudgetRange(estimate.totalMinCost, estimate.totalMaxCost);
+    const params = new URLSearchParams({
+      scope: estimate.summaryText,
+      service: serviceName,
+      budget: budgetRange,
+      type: estimate.projectType.name,
+      tier: estimate.scopeTier.name,
+      minCost: estimate.totalMinCost.toString(),
+      maxCost: estimate.totalMaxCost.toString(),
+      minWeeks: estimate.totalMinWeeks.toString(),
+      maxWeeks: estimate.totalMaxWeeks.toString(),
+    });
+    return `/contact?${params.toString()}`;
+  }, [estimate]);
 
   return (
     <Section id="estimator" className="py-16 md:py-24 border-y border-zinc-800/80 bg-zinc-950/90 relative">
@@ -85,7 +101,7 @@ export default function ProjectEstimator() {
           </Heading>
 
           <Text className="text-base sm:text-lg text-zinc-300 max-w-2xl mx-auto">
-            Select your target software requirements below to get an instant realistic estimate and timeline for your business.
+            Select your target software requirements below to generate an interactive ballpark estimate and timeline for your business.
           </Text>
         </div>
 
@@ -215,7 +231,7 @@ export default function ProjectEstimator() {
               <div className="flex items-center justify-between border-b border-zinc-800 pb-4">
                 <div>
                   <h3 className="text-lg font-bold text-white">Step 2: Select Scope &amp; Complexity Tier</h3>
-                  <p className="text-xs text-zinc-400">Determine the depth of architectural tooling and SLA commitments.</p>
+                  <p className="text-xs text-zinc-400">Determine the depth of architectural tooling and support requirements.</p>
                 </div>
                 <span className="text-xs text-amber-400 font-mono font-semibold">2 of 4</span>
               </div>
@@ -251,7 +267,7 @@ export default function ProjectEstimator() {
                       <div className="pt-2 border-t border-zinc-800/60 text-[11px] text-zinc-400">
                         {tier.id === "mvp" && "• Rapid MVP deployment"}
                         {tier.id === "pro" && "• Full custom design system & reporting"}
-                        {tier.id === "enterprise-tier" && "• 24/7 SLA & multi-region cloud"}
+                        {tier.id === "enterprise-tier" && "• Dedicated cloud infrastructure & maintenance"}
                       </div>
                     </button>
                   );
@@ -348,7 +364,7 @@ export default function ProjectEstimator() {
             </div>
           )}
 
-          {/* STEP 4: INSTANT ESTIMATE SUMMARY */}
+          {/* STEP 4: ESTIMATE SUMMARY */}
           {step === 4 && (
             <div className="space-y-6 animate-in fade-in duration-200">
               <div className="flex items-center justify-between border-b border-zinc-800 pb-4">
