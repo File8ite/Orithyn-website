@@ -4,10 +4,9 @@ import Text from "@/components/ui/Text";
 import Button from "@/components/ui/Button";
 import Link from "next/link";
 import { ArrowRight, Mail, MessageSquare } from "lucide-react";
+import { WHATSAPP_BUSINESS_URL } from "@/lib/contactConfig";
 
 export default function CtaSection() {
-  const whatsappNumber = "2348148526658";
-
   return (
     <Section id="contact" className="py-16 md:py-24">
       <div className="relative rounded-3xl bg-zinc-900/90 border border-amber-500/30 text-white p-8 sm:p-16 text-center max-w-5xl mx-auto overflow-hidden shadow-2xl backdrop-blur-xl">
@@ -38,20 +37,21 @@ export default function CtaSection() {
 
           <div className="pt-6 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-zinc-400">
             <a
-              href={`https://wa.me/${whatsappNumber}?text=Hello%20Orithyn,%20I'd%20like%20to%20discuss%20a%20software%20project`}
+              href={WHATSAPP_BUSINESS_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 hover:text-amber-400 transition"
+              aria-label="Chat with us on WhatsApp (opens in a new tab)"
+              className="inline-flex items-center gap-2 text-zinc-200 font-medium hover:text-amber-400 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-lg px-2 py-1"
             >
-              <MessageSquare className="h-4 w-4 text-emerald-400" />
-              <span>WhatsApp: <strong className="text-zinc-200">+234 814 852 6658</strong></span>
+              <MessageSquare className="h-4 w-4 text-amber-400" aria-hidden="true" />
+              <span>Chat with us on WhatsApp</span>
             </a>
 
             <a
               href="mailto:contact@orithyn.com"
-              className="inline-flex items-center gap-2 hover:text-amber-400 transition"
+              className="inline-flex items-center gap-2 hover:text-amber-400 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded-lg px-2 py-1"
             >
-              <Mail className="h-4 w-4 text-amber-400" />
+              <Mail className="h-4 w-4 text-amber-400" aria-hidden="true" />
               <span>Email: <strong className="text-zinc-200">contact@orithyn.com</strong></span>
             </a>
           </div>

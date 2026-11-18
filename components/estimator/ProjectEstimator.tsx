@@ -12,7 +12,7 @@ import {
   featureAddons,
   calculateProjectEstimate,
 } from "@/lib/estimatorData";
-import { mapProjectTypeToService, mapBudgetRange } from "@/lib/contactConfig";
+import { mapProjectTypeToService, mapBudgetRange, WHATSAPP_BUSINESS_URL } from "@/lib/contactConfig";
 import {
   LayoutDashboard,
   Bot,
@@ -27,6 +27,7 @@ import {
   DollarSign,
   Layers,
   ChevronRight,
+  MessageSquare,
 } from "lucide-react";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -451,14 +452,27 @@ export default function ProjectEstimator() {
                   ← Modify Feature Selections
                 </button>
 
-                <Link href={contactUrl} className="w-full sm:w-auto">
-                  <Button
-                    variant="primary"
-                    className="w-full sm:w-auto h-12 px-7 text-sm font-extrabold inline-flex items-center justify-center gap-2 shadow-xl shadow-amber-500/25"
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full sm:w-auto">
+                  <a
+                    href={WHATSAPP_BUSINESS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Chat with us on WhatsApp (opens in a new tab)"
+                    className="w-full sm:w-auto h-12 px-5 rounded-xl text-sm font-semibold inline-flex items-center justify-center gap-2 border border-amber-500/40 bg-amber-500/10 text-amber-400 hover:bg-amber-500 hover:text-black transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
                   >
-                    Book Strategy Call with this Scope <ArrowRight className="h-4 w-4" />
-                  </Button>
-                </Link>
+                    <MessageSquare className="h-4 w-4" aria-hidden="true" />
+                    Chat with us on WhatsApp
+                  </a>
+
+                  <Link href={contactUrl} className="w-full sm:w-auto">
+                    <Button
+                      variant="primary"
+                      className="w-full sm:w-auto h-12 px-7 text-sm font-extrabold inline-flex items-center justify-center gap-2 shadow-xl shadow-amber-500/25"
+                    >
+                      Book Strategy Call with this Scope <ArrowRight className="h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           )}

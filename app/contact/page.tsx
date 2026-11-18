@@ -7,7 +7,8 @@ import Text from "@/components/ui/Text";
 import ContactForm from "@/components/contact/ContactForm";
 import JsonLd from "@/components/seo/JsonLd";
 import { getBreadcrumbJsonLd } from "@/lib/jsonLd";
-import { Mail, MapPin, MessageSquare, Phone, Code2, ShieldCheck } from "lucide-react";
+import { WHATSAPP_BUSINESS_URL } from "@/lib/contactConfig";
+import { Mail, MapPin, MessageSquare, Phone, Code2 } from "lucide-react";
 
 export const metadata = {
   title: "Contact & Project Inquiries",
@@ -19,7 +20,6 @@ export const metadata = {
 };
 
 export default function ContactPage() {
-  const whatsappNumber = "2348148526658";
   const breadcrumb = getBreadcrumbJsonLd([
     { name: "Home", url: "https://orithyn.com" },
     { name: "Contact", url: "https://orithyn.com/contact" },
@@ -61,18 +61,19 @@ export default function ContactPage() {
                 {/* WhatsApp Quick Card */}
                 <div className="flex items-start gap-4 p-5 rounded-2xl bg-zinc-900/80 border border-amber-500/30 shadow-lg">
                   <div className="p-3 rounded-xl bg-amber-500/10 text-amber-400 shrink-0">
-                    <MessageSquare className="h-5 w-5" />
+                    <MessageSquare className="h-5 w-5" aria-hidden="true" />
                   </div>
                   <div className="space-y-1">
-                    <h3 className="text-sm font-bold text-white">Chat on WhatsApp</h3>
-                    <p className="text-xs text-amber-400 font-mono">+234 814 852 6658</p>
+                    <h3 className="text-sm font-bold text-white">WhatsApp Business</h3>
+                    <p className="text-xs text-zinc-400">Direct conversation with our team</p>
                     <a
-                      href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Hello Orithyn, I would like to discuss a software project.")}`}
+                      href={WHATSAPP_BUSINESS_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs font-bold text-amber-400 hover:text-amber-300 transition pt-1"
+                      aria-label="Chat with us on WhatsApp (opens in a new tab)"
+                      className="inline-flex items-center gap-1 text-xs font-bold text-amber-400 hover:text-amber-300 transition pt-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
                     >
-                      Open WhatsApp Chat →
+                      Chat with us on WhatsApp →
                     </a>
                   </div>
                 </div>

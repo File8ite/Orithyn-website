@@ -1,8 +1,7 @@
 "use client";
 
-import Button from "@/components/ui/Button";
-import { ContactFormData } from "@/lib/contactConfig";
-import { CheckCircle2, MessageSquare, ArrowRight, RotateCcw, Clock, Mail, ShieldCheck } from "lucide-react";
+import { ContactFormData, WHATSAPP_BUSINESS_URL } from "@/lib/contactConfig";
+import { CheckCircle2, MessageSquare, RotateCcw, Clock } from "lucide-react";
 
 interface ContactSuccessProps {
   data: ContactFormData;
@@ -10,7 +9,6 @@ interface ContactSuccessProps {
 }
 
 export default function ContactSuccess({ data, onReset }: ContactSuccessProps) {
-  const whatsappNumber = "2348148526658";
 
   return (
     <div className="bg-zinc-900/90 p-6 sm:p-10 rounded-3xl border border-amber-500/30 shadow-2xl backdrop-blur-xl animate-in fade-in duration-300">
@@ -81,14 +79,13 @@ export default function ContactSuccess({ data, onReset }: ContactSuccessProps) {
       {/* Immediate Escalation & Reset Actions */}
       <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
         <a
-          href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(`Hello Orithyn, I just submitted a web enquiry regarding ${data.service} (${data.name}).`)}`}
+          href={WHATSAPP_BUSINESS_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full sm:w-auto"
+          aria-label="Chat with us on WhatsApp (opens in a new tab)"
+          className="w-full sm:w-auto h-11 px-5 rounded-xl text-xs font-medium inline-flex items-center justify-center gap-2 border border-amber-500/40 bg-amber-500/10 text-amber-400 hover:bg-amber-500 hover:text-black transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
         >
-          <Button variant="outline" className="w-full sm:w-auto h-11 text-xs inline-flex items-center gap-2 border-zinc-700 hover:border-emerald-500 hover:text-emerald-400 transition">
-            <MessageSquare className="h-4 w-4 text-emerald-400" /> Have Urgent Questions? WhatsApp Us
-          </Button>
+          <MessageSquare className="h-4 w-4" aria-hidden="true" /> Have Urgent Questions? Chat with us on WhatsApp
         </a>
 
         <button

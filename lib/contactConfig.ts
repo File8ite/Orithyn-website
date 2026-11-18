@@ -1,3 +1,6 @@
+export const WHATSAPP_BUSINESS_URL = "https://wa.me/message/XG6VGKBPYH3YH1";
+export const CONTACT_EMAIL = "contact@orithyn.com";
+
 export interface ContactFormData {
   name: string;
   company: string;
@@ -159,20 +162,8 @@ export function generateMailtoFallback(data: ContactFormData, destinationEmail: 
 }
 
 /**
- * Generates an offline WhatsApp fallback link with all fields pre-filled
+ * Returns the official Orithyn WhatsApp Business short link for direct chat fallback.
  */
-export function generateWhatsAppFallback(data: ContactFormData, whatsappNumber: string = "2348148526658"): string {
-  const text = encodeURIComponent(
-    `*New Website Enquiry*\n\n` +
-    `*Name:* ${data.name}\n` +
-    `*Email:* ${data.email}\n` +
-    `*Company:* ${data.company || "N/A"}\n` +
-    `*Phone:* ${data.phone || "N/A"}\n` +
-    `*Service:* ${data.service}\n` +
-    `*Budget:* ${data.budget || "Flexible"}\n` +
-    `*Preferred Contact:* ${data.preferredContact}\n\n` +
-    `*Project Details / Scope:*\n${data.message}`
-  );
-
-  return `https://wa.me/${whatsappNumber}?text=${text}`;
+export function generateWhatsAppFallback(): string {
+  return WHATSAPP_BUSINESS_URL;
 }

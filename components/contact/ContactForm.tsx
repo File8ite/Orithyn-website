@@ -234,7 +234,7 @@ export default function ContactForm() {
   }
 
   const mailtoFallback = generateMailtoFallback(formData);
-  const whatsappFallback = generateWhatsAppFallback(formData);
+  const whatsappFallback = generateWhatsAppFallback();
 
   return (
     <div className="bg-zinc-900/90 p-6 sm:p-10 rounded-3xl border border-zinc-800 shadow-2xl backdrop-blur-xl">
@@ -288,9 +288,10 @@ export default function ContactForm() {
               href={whatsappFallback}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-emerald-400 border border-zinc-700 transition"
+              aria-label="Chat with us on WhatsApp (opens in a new tab)"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-amber-400 border border-zinc-700 transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
             >
-              <MessageSquare className="h-3.5 w-3.5" /> Send via WhatsApp
+              <MessageSquare className="h-3.5 w-3.5" aria-hidden="true" /> Chat with us on WhatsApp
             </a>
           </div>
         </div>

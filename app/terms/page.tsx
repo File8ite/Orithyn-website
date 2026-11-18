@@ -4,6 +4,7 @@ import Section from "@/components/ui/Section";
 import Heading from "@/components/ui/Heading";
 import Text from "@/components/ui/Text";
 import { FileText } from "lucide-react";
+import { WHATSAPP_BUSINESS_URL } from "@/lib/contactConfig";
 
 export const metadata = {
   title: "Terms of Service | Orithyn Inc.",
@@ -92,7 +93,7 @@ export default function TermsPage() {
               <div className="rounded-xl border border-zinc-800 bg-zinc-900/60 p-6 space-y-2">
                 <p className="font-semibold text-white">Orithyn Inc.</p>
                 <p className="text-zinc-400">Email: <a href="mailto:contact@orithyn.com" className="text-amber-400 hover:underline">contact@orithyn.com</a></p>
-                <p className="text-zinc-400">WhatsApp / Phone: <a href="https://wa.me/2348148526658" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">+234 814 852 6658</a></p>
+                <p className="text-zinc-400">WhatsApp: <a href={WHATSAPP_BUSINESS_URL} target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp (opens in a new tab)" className="text-amber-400 hover:underline">Chat with us on WhatsApp</a></p>
               </div>
             </div>
           </div>

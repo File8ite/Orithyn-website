@@ -18,8 +18,10 @@ import {
   Activity,
   Check,
   Server,
-  Smartphone
+  Smartphone,
+  MessageSquare
 } from "lucide-react";
+import { WHATSAPP_BUSINESS_URL } from "@/lib/contactConfig";
 
 export default function Hero() {
   const [activeTab, setActiveTab] = useState<"web" | "ai" | "automation" | "support">("web");
@@ -94,6 +96,20 @@ export default function Hero() {
                 Explore Our Services
               </Button>
             </Link>
+          </div>
+
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-zinc-400">
+            <MessageSquare className="h-4 w-4 text-amber-400 shrink-0" aria-hidden="true" />
+            <span>Need a quick response?</span>
+            <a
+              href={WHATSAPP_BUSINESS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Chat with us on WhatsApp (opens in a new tab)"
+              className="font-semibold text-amber-400 hover:text-amber-300 underline-offset-4 hover:underline transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 rounded"
+            >
+              Chat with us on WhatsApp
+            </a>
           </div>
 
           {/* Value Props Checklist */}
